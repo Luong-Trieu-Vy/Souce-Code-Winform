@@ -1,10 +1,12 @@
-﻿using System;
+﻿using listnhac.Model;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Windows.Forms;
-using listnhac.Model;
-
+using TagLib;
+using WMPLib;
 namespace listnhac
 {
     public partial class frmMedia : Form
@@ -40,13 +42,20 @@ namespace listnhac
 
             songList = new List<Song>();
             videoList = new List<Video>();
+            player.settings.autoStart = false;
         }
 
         private void frmMedia_Load(object sender, EventArgs e)
         {
             cmbSort.Items.AddRange(new string[] { "Sort by A-Z", "Sort by Z-A" });
             cmbSort.SelectedItem = "Sort by A-Z";
-            LoadMusic();
+
+            LoadMusic(); // Load music files into the player
+
+            // Initialize trackbar volume to the current player's volume level
+            trackBar1.Minimum = 0; // Set minimum volume level
+            trackBar1.Maximum = 100; // Set maximum volume level
+            trackBar1.Value = player.settings.volume;
         }
 
         // =======================
@@ -58,15 +67,18 @@ namespace listnhac
             Application.Exit();
         }
 
-
+        private void btnMusic_Click(object sender, EventArgs e)
+        {
+            tab.SelectedTab = tabMusic;
+            LoadMusic();
+        }
 
         private void btnVideo_Click(object sender, EventArgs e)
         {
             tab.SelectedTab = tabVideos;
             LoadVideos();
-        }
-
-        private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
+        }      
+        private void cmbSort_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             SortMedia(cmbSort.SelectedItem.ToString());
         }
@@ -129,7 +141,7 @@ namespace listnhac
             {
                 var selectedSong = dgvMusic.SelectedRows[0].DataBoundItem as Song;
                 if (selectedSong != null)
-                {
+                {                  
                     var result = MessageBox.Show("Bạn có chắc chắn muốn xóa bài hát này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
@@ -185,15 +197,13 @@ namespace listnhac
                 UpdatePlaybackProgress();
             }
         }
-
-        private void Player_PlayStateChange(int NewState)
+       private void Player_PlayStateChange(int NewState)
         {
             if ((WMPLib.WMPPlayState)NewState == WMPLib.WMPPlayState.wmppsMediaEnded)
             {
                 PlayNextSong();
             }
         }
-
 
         private void Player_MediaError(object pMediaObject)
         {
@@ -211,7 +221,10 @@ namespace listnhac
                 btnPlay.Text = "Play";
             }
         }
+        private void Player1_MediaError(object sender, AxWMPLib._WMPOCXEvents_MediaErrorEvent e)
+        {
 
+        }
 
 
 
@@ -254,9 +267,9 @@ namespace listnhac
 
         private void BindVideoData()
         {
-            dgvVideos.DataSource = null;
-            dgvVideos.DataSource = videoList;
-            ConfigureDataGridView(dgvVideos, true);
+            dgvVideo.DataSource = null;
+            dgvVideo.DataSource = videoList;
+            ConfigureDataGridView(dgvVideo, true);
         }
 
         private void ConfigureDataGridView(DataGridView dgv, bool isVideo = false)
@@ -266,15 +279,16 @@ namespace listnhac
 
             if (isVideo)
             {
+                // Thêm cột cho Video
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "Title",
+                    DataPropertyName = "Title",   // Đảm bảo đối tượng dữ liệu có thuộc tính "Title"
                     HeaderText = "Tên video",
                     Width = 200
                 });
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "FilePath",
+                    DataPropertyName = "FilePath", // Đảm bảo đối tượng dữ liệu có thuộc tính "FilePath"
                     HeaderText = "Đường dẫn",
                     Width = 300
                 });
@@ -283,18 +297,19 @@ namespace listnhac
             {
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "Title",
+                    DataPropertyName = "Title",    // Đảm bảo đối tượng dữ liệu có thuộc tính "Title"
                     HeaderText = "Tên bài hát",
                     Width = 200
                 });
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "Artist",
-                    HeaderText = "Ca sĩ",
-                    Width = 150
+                    DataPropertyName = "FilePath", // Thêm cột đường dẫn cho bài hát nếu cần
+                    HeaderText = "Đường dẫn",
+                    Width = 300
                 });
             }
 
+            // Gọi phương thức cấu hình style chung cho DataGridView
             ConfigureDataGridViewStyle(dgv);
         }
 
@@ -307,6 +322,7 @@ namespace listnhac
             dgv.AllowUserToDeleteRows = false;
             dgv.RowHeadersVisible = false;
 
+            // Thiết lập style cho DataGridView
             dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.BackgroundColor = Color.White;
@@ -353,9 +369,7 @@ namespace listnhac
             }
         }
 
-        // =======================
-        // Song and Video Handling
-        // =======================
+
 
         private void AddSongs()
         {
@@ -368,9 +382,12 @@ namespace listnhac
                 {
                     foreach (string file in ofd.FileNames)
                     {
+                        // Sử dụng TagLib để lấy thông tin ca sĩ
+                        var fileTag = TagLib.File.Create(file);
+
                         Song newSong = new Song
                         {
-                            Title = System.IO.Path.GetFileNameWithoutExtension(file),
+                            Title = fileTag.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(file), // Lấy tên bài hát từ metadata, nếu không có thì lấy từ tên tệp
                             FilePath = file
                         };
 
@@ -423,81 +440,174 @@ namespace listnhac
             BindMusicData();
         }
 
+        // =======================
+        // Error Handling
+        // =======================
 
         private void ShowErrorMessage(string message, Exception ex)
         {
             MessageBox.Show($"{message}\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void btnSelectSong_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            tab.SelectedTab = tabMusic;
-            LoadMusic();
-        }
-
-        //edit
-        private void button1_Click(object sender, EventArgs e)
-        {
+            //nhấn nút edit này thì sẽ qua form edit 
             if (dgvMusic.SelectedRows.Count > 0)
             {
-                var songIdCell = dgvMusic.SelectedRows[0].Cells.Cast<DataGridViewCell>()
-                                    .FirstOrDefault(cell => cell.OwningColumn.Name == "SongID");
+                // Lấy bài hát được chọn từ DataGridView
+                Song selectedSong = dgvMusic.SelectedRows[0].DataBoundItem as Song; // Giả sử Song là kiểu dữ liệu của bạn
 
-                if (songIdCell != null && songIdCell.Value != null)
+                if (selectedSong != null)
                 {
-                    int songId = (int)songIdCell.Value;
+                    // Khởi tạo form chỉnh sửa và truyền bài hát cùng DbContext
+                    frmEdit editForm = new frmEdit(selectedSong, Context);
 
-                    frmEdit editForm = new frmEdit(songId);
+                    // Hiển thị form chỉnh sửa
                     editForm.ShowDialog();
 
-                    LoadMusic();
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy cột 'SongID'.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Sau khi form chỉnh sửa được đóng, có thể cần cập nhật lại danh sách bài hát
+                    LoadMusic(); // Giả sử LoadSongs là phương thức để tải lại danh sách bài hát
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn một bài hát để chỉnh sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng chọn một bài hát để chỉnh sửa!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            //tăng giảm âm lượng bài hát
+            player.settings.volume = trackBar1.Value;
         }
 
         private void btnAddVideo_Click(object sender, EventArgs e)
         {
-            AddVideos();
-        }
-        private void AddVideos()
-        {
+            // thêm video vào datagridview
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Video Files|*.mp4;*.avi;*.mov;*.mkv";
+                ofd.Filter = "Video Files|*.mp4;*.avi;*.mov"; // Thay đổi định dạng nếu cần
                 ofd.Multiselect = true;
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     foreach (string file in ofd.FileNames)
                     {
-                        var newVideo = new Video
+                        Video newVideo = new Video
                         {
                             Title = System.IO.Path.GetFileNameWithoutExtension(file),
                             FilePath = file
                         };
 
-                        videoList.Add(newVideo);
-                        Context.Videos.Add(newVideo);
+                        // Kiểm tra xem videoList đã được khởi tạo chưa
+                        if (videoList == null)
+                        {
+                            videoList = new List<Video>();
+                        }
+
+                        try
+                        {
+                            // Thêm video vào danh sách và cơ sở dữ liệu
+                            videoList.Add(newVideo);
+                            Context.Videos.Add(newVideo); // Sửa tên biến ở đây
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Lỗi khi thêm video: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
 
-                    Context.SaveChanges();
-                    LoadVideos();
+                    try
+                    {
+                        Context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+                        LoadVideos(); // Tải lại danh sách video
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi khi lưu video vào cơ sở dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
 
+        private void btnRemoveVid_Click(object sender, EventArgs e)
+        {
+            //xóa video
+            if (dgvVideo.SelectedRows.Count > 0)
+            {
+                var selectedVideo = dgvVideo.SelectedRows[0].DataBoundItem as Video;
+                if (selectedVideo != null)
+                {
+                    videoList.Remove(selectedVideo); // Xóa khỏi danh sách
+                    Context.Videos.Remove(selectedVideo); // Xóa khỏi cơ sở dữ liệu
+                    Context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
+                    LoadVideos(); // Tải lại danh sách video
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn video để xóa.");
+            }
+        }
 
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            LoadVideos();
+        }
+        private void OpenVideoForm(string videoPath)
+        {
+            frmVideo videoForm = new frmVideo(new string[] { videoPath });
+            videoForm.Owner = this; // Đặt frmMedia là form cha
+            videoForm.Show();
+        }
+
+        private void cmpSortVideo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string sortOption = cmpSortVideo.SelectedItem.ToString();
+
+            if (sortOption == "Sort by A-Z")
+            {
+                videoList = videoList.OrderBy(v => v.Title).ToList();
+            }
+            else if (sortOption == "Sort by Z-A")
+            {
+                videoList = videoList.OrderByDescending(v => v.Title).ToList();
+            }
+            BindVideoData();
+        }
+
+        private void dgvVideo_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var cellValue = dgvVideo.Rows[e.RowIndex].Cells[1].Value;
+                if (cellValue != null && !string.IsNullOrEmpty(cellValue.ToString()))
+                {
+                    string videoPath = cellValue.ToString();
+                    frmVideo videoForm = new frmVideo(new string[] { videoPath });
+                    videoForm.Show(this);
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Đường dẫn video không tồn tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnPlaylist_Click(object sender, EventArgs e)
+        {
+            DisplayPlaylist playList = new DisplayPlaylist();
+            playList.Show(this);
+        }
+        
+
+        private void p_bar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace listnhac.Model
         public Song()
         {
             PlaylistSongs = new HashSet<PlaylistSong>();
+            Users = new HashSet<User>();
         }
 
         public int SongID { get; set; }
@@ -26,9 +27,16 @@ namespace listnhac.Model
         [StringLength(500)]
         public string FilePath { get; set; }
 
+        public int? GenreID { get; set; }
+
         public DateTime? UploadDate { get; set; }
+
+        public virtual Genre Genre { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlaylistSong> PlaylistSongs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<User> Users { get; set; }
     }
 }

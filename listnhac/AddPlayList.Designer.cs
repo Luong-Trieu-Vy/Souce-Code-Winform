@@ -108,6 +108,7 @@
             this.txtNamePlaylist.Name = "txtNamePlaylist";
             this.txtNamePlaylist.Size = new System.Drawing.Size(210, 20);
             this.txtNamePlaylist.TabIndex = 1;
+            this.txtNamePlaylist.TextChanged += new System.EventHandler(this.txtNamePlaylist_TextChanged);
             // 
             // panel2
             // 

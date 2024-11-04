@@ -36,15 +36,16 @@
             this.lblFile = new System.Windows.Forms.Label();
             this.txtFile = new System.Windows.Forms.TextBox();
             this.btnOpenFile = new System.Windows.Forms.Button();
+            this.txtArtist = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(158, 327);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(210, 281);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(145, 29);
+            this.btnCancel.Size = new System.Drawing.Size(193, 36);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -57,10 +58,9 @@
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(9, 327);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(12, 281);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(144, 29);
+            this.btnSave.Size = new System.Drawing.Size(192, 36);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -70,41 +70,36 @@
             // 
             this.lblEdit.AutoSize = true;
             this.lblEdit.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdit.Location = new System.Drawing.Point(72, 7);
-            this.lblEdit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEdit.Location = new System.Drawing.Point(139, 9);
             this.lblEdit.Name = "lblEdit";
-            this.lblEdit.Size = new System.Drawing.Size(163, 46);
+            this.lblEdit.Size = new System.Drawing.Size(184, 57);
             this.lblEdit.TabIndex = 11;
-            this.lblEdit.Text = "Edit song";
+            this.lblEdit.Text = "Edit title";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(40, 72);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(54, 89);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(30, 15);
+            this.lblTitle.Size = new System.Drawing.Size(38, 20);
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "Title";
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(44, 91);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTitle.Location = new System.Drawing.Point(58, 112);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(207, 20);
+            this.txtTitle.Size = new System.Drawing.Size(345, 22);
             this.txtTitle.TabIndex = 13;
-            this.txtTitle.TextChanged += new System.EventHandler(this.txtTitle_TextChanged);
             // 
             // lblFile
             // 
             this.lblFile.AutoSize = true;
             this.lblFile.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFile.Location = new System.Drawing.Point(40, 138);
-            this.lblFile.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFile.Location = new System.Drawing.Point(54, 188);
             this.lblFile.Name = "lblFile";
-            this.lblFile.Size = new System.Drawing.Size(71, 15);
+            this.lblFile.Size = new System.Drawing.Size(90, 20);
             this.lblFile.TabIndex = 16;
             this.lblFile.Text = "File location";
             // 
@@ -112,12 +107,10 @@
             // 
             this.txtFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.txtFile.Enabled = false;
-            this.txtFile.Location = new System.Drawing.Point(43, 171);
-            this.txtFile.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFile.Location = new System.Drawing.Point(58, 211);
             this.txtFile.Name = "txtFile";
-            this.txtFile.Size = new System.Drawing.Size(207, 20);
+            this.txtFile.Size = new System.Drawing.Size(345, 22);
             this.txtFile.TabIndex = 17;
-            this.txtFile.TextChanged += new System.EventHandler(this.txtFile_TextChanged);
             // 
             // btnOpenFile
             // 
@@ -126,21 +119,39 @@
             this.btnOpenFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOpenFile.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenFile.ForeColor = System.Drawing.Color.Purple;
-            this.btnOpenFile.Location = new System.Drawing.Point(8, 278);
-            this.btnOpenFile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOpenFile.Location = new System.Drawing.Point(11, 239);
             this.btnOpenFile.Name = "btnOpenFile";
-            this.btnOpenFile.Size = new System.Drawing.Size(145, 29);
+            this.btnOpenFile.Size = new System.Drawing.Size(193, 36);
             this.btnOpenFile.TabIndex = 18;
             this.btnOpenFile.Text = "Open file location";
             this.btnOpenFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOpenFile.UseVisualStyleBackColor = false;
             this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
+            // txtArtist
+            // 
+            this.txtArtist.Location = new System.Drawing.Point(58, 163);
+            this.txtArtist.Name = "txtArtist";
+            this.txtArtist.Size = new System.Drawing.Size(345, 22);
+            this.txtArtist.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(54, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Artist";
+            // 
             // frmEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 366);
+            this.ClientSize = new System.Drawing.Size(437, 343);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtArtist);
             this.Controls.Add(this.btnOpenFile);
             this.Controls.Add(this.txtFile);
             this.Controls.Add(this.lblFile);
@@ -150,7 +161,6 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmEdit";
             this.Text = "Edit info";
             this.Load += new System.EventHandler(this.frmEdit_Load);
@@ -169,5 +179,7 @@
         private System.Windows.Forms.Label lblFile;
         private System.Windows.Forms.TextBox txtFile;
         private System.Windows.Forms.Button btnOpenFile;
+        private System.Windows.Forms.TextBox txtArtist;
+        private System.Windows.Forms.Label label1;
     }
 }

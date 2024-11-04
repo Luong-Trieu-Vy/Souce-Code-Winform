@@ -8,12 +8,6 @@ namespace listnhac.Model
 
     public partial class Video
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Video()
-        {
-            PlaylistVideos = new HashSet<PlaylistVideo>();
-        }
-
         public int VideoID { get; set; }
 
         [Required]
@@ -24,7 +18,6 @@ namespace listnhac.Model
         [StringLength(500)]
         public string FilePath { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlaylistVideo> PlaylistVideos { get; set; }
+        public DateTime? UploadDate { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace listnhac
 {
-    partial class Display_Songs
+    partial class frmDisplaySongs
     {
         /// <summary>
         /// Required designer variable.
@@ -29,19 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAddMusic = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNo = new System.Windows.Forms.TextBox();
-            this.lblNo = new System.Windows.Forms.Label();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.txtAuthor = new System.Windows.Forms.TextBox();
-            this.lblAuthor = new System.Windows.Forms.Label();
-            this.txtNameSong = new System.Windows.Forms.TextBox();
-            this.lblNameSong = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnPlayAll = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -69,22 +62,44 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnAddMusic);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtNo);
-            this.panel2.Controls.Add(this.lblNo);
-            this.panel2.Controls.Add(this.txtTime);
-            this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Controls.Add(this.txtAuthor);
-            this.panel2.Controls.Add(this.lblAuthor);
-            this.panel2.Controls.Add(this.txtNameSong);
-            this.panel2.Controls.Add(this.lblNameSong);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 501);
             this.panel2.TabIndex = 1;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(86, 319);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(103, 51);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnAddMusic
+            // 
+            this.btnAddMusic.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddMusic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMusic.ForeColor = System.Drawing.Color.Black;
+            this.btnAddMusic.Location = new System.Drawing.Point(86, 200);
+            this.btnAddMusic.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddMusic.Name = "btnAddMusic";
+            this.btnAddMusic.Size = new System.Drawing.Size(103, 51);
+            this.btnAddMusic.TabIndex = 14;
+            this.btnAddMusic.Text = "Add Music";
+            this.btnAddMusic.UseVisualStyleBackColor = false;
+            this.btnAddMusic.Click += new System.EventHandler(this.btnAddMusic_Click);
             // 
             // pictureBox1
             // 
@@ -110,91 +125,10 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Playlist";
             // 
-            // txtNo
-            // 
-            this.txtNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNo.Location = new System.Drawing.Point(56, 402);
-            this.txtNo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(159, 24);
-            this.txtNo.TabIndex = 11;
-            // 
-            // lblNo
-            // 
-            this.lblNo.AutoSize = true;
-            this.lblNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNo.Location = new System.Drawing.Point(54, 376);
-            this.lblNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNo.Name = "lblNo";
-            this.lblNo.Size = new System.Drawing.Size(40, 18);
-            this.lblNo.TabIndex = 10;
-            this.lblNo.Text = "No...";
-            // 
-            // txtTime
-            // 
-            this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTime.Location = new System.Drawing.Point(56, 328);
-            this.txtTime.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(84, 24);
-            this.txtTime.TabIndex = 9;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(54, 302);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(41, 18);
-            this.lblTime.TabIndex = 8;
-            this.lblTime.Text = "Time";
-            // 
-            // txtAuthor
-            // 
-            this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAuthor.Location = new System.Drawing.Point(56, 249);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.Size = new System.Drawing.Size(159, 24);
-            this.txtAuthor.TabIndex = 7;
-            // 
-            // lblAuthor
-            // 
-            this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAuthor.Location = new System.Drawing.Point(54, 223);
-            this.lblAuthor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(51, 18);
-            this.lblAuthor.TabIndex = 6;
-            this.lblAuthor.Text = "Author";
-            // 
-            // txtNameSong
-            // 
-            this.txtNameSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameSong.Location = new System.Drawing.Point(56, 179);
-            this.txtNameSong.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNameSong.Name = "txtNameSong";
-            this.txtNameSong.Size = new System.Drawing.Size(159, 24);
-            this.txtNameSong.TabIndex = 1;
-            // 
-            // lblNameSong
-            // 
-            this.lblNameSong.AutoSize = true;
-            this.lblNameSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameSong.Location = new System.Drawing.Point(54, 153);
-            this.lblNameSong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNameSong.Name = "lblNameSong";
-            this.lblNameSong.Size = new System.Drawing.Size(87, 18);
-            this.lblNameSong.TabIndex = 0;
-            this.lblNameSong.Text = "Name Song";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Controls.Add(this.btnExit);
-            this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnPlayAll);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.txtSearch);
@@ -221,19 +155,6 @@
             this.btnExit.TabIndex = 14;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackgroundImage = global::listnhac.Properties.Resources.correct;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(87, 41);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(36, 30);
-            this.btnDelete.TabIndex = 13;
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // btnPlayAll
             // 
@@ -322,7 +243,7 @@
             // btnStop
             // 
             this.btnStop.BackColor = System.Drawing.Color.Purple;
-            this.btnStop.BackgroundImage = global::listnhac.Properties.Resources.play_pause;
+            this.btnStop.BackgroundImage = global::listnhac.Properties.Resources.stop_button;
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.ForeColor = System.Drawing.Color.Purple;
@@ -449,6 +370,8 @@
             // 
             // dgvSong
             // 
+            this.dgvSong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvSong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSong.Location = new System.Drawing.Point(0, 89);
             this.dgvSong.Margin = new System.Windows.Forms.Padding(2);
@@ -459,7 +382,7 @@
             this.dgvSong.TabIndex = 0;
             this.dgvSong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSong_CellContentClick);
             // 
-            // Display_Songs
+            // frmDisplaySongs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -468,8 +391,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Display_Songs";
-            this.Text = "Display_Songs";
+            this.Name = "frmDisplaySongs";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -499,21 +421,14 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Label lbl_trackend;
         private System.Windows.Forms.Button btnChon;
-        private System.Windows.Forms.TextBox txtNameSong;
-        private System.Windows.Forms.Label lblNameSong;
-        private System.Windows.Forms.TextBox txtAuthor;
-        private System.Windows.Forms.Label lblAuthor;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.TextBox txtNo;
-        private System.Windows.Forms.Label lblNo;
-        private System.Windows.Forms.TextBox txtTime;
-        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnPlayAll;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnAddMusic;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

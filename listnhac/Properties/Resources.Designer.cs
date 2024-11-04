@@ -293,16 +293,6 @@ namespace listnhac.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2024_11_03_221943 {
-            get {
-                object obj = ResourceManager.GetObject("Screenshot 2024-11-03 221943", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap search_interface_symbol {
             get {
                 object obj = ResourceManager.GetObject("search-interface-symbol", resourceCulture);
@@ -326,6 +316,16 @@ namespace listnhac.Properties {
         internal static System.Drawing.Bitmap spotify1 {
             get {
                 object obj = ResourceManager.GetObject("spotify1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stop_button {
+            get {
+                object obj = ResourceManager.GetObject("stop-button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,10 +1,10 @@
-﻿using System;
+﻿using listnhac.Model;
+using System;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using System.Configuration;
-using listnhac.Model;
 
 namespace listnhac
 {
@@ -114,6 +114,11 @@ namespace listnhac
         private void btnExit_Click_2(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

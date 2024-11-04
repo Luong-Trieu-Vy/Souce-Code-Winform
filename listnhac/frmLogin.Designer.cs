@@ -60,7 +60,7 @@
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(386, 510);
             this.panel2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.pictureBox3.Image = global::listnhac.Properties.Resources.listen;
             this.pictureBox3.Location = new System.Drawing.Point(58, 73);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(286, 310);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -83,10 +83,11 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(386, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(524, 510);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnExit
             // 
@@ -99,7 +100,7 @@
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.btnExit.Location = new System.Drawing.Point(491, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(22, 24);
             this.btnExit.TabIndex = 10;
@@ -135,7 +136,7 @@
             this.panel4.Controls.Add(this.lblLogin);
             this.panel4.Controls.Add(this.txtUserName);
             this.panel4.Location = new System.Drawing.Point(112, 73);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(299, 367);
             this.panel4.TabIndex = 8;
@@ -146,7 +147,7 @@
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.Purple;
             this.btnSignUp.Location = new System.Drawing.Point(168, 289);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(127, 41);
             this.btnSignUp.TabIndex = 14;
@@ -158,7 +159,7 @@
             // 
             this.pictureBox2.Image = global::listnhac.Properties.Resources.password;
             this.pictureBox2.Location = new System.Drawing.Point(11, 128);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 31);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +170,7 @@
             // 
             this.pictureBox1.Image = global::listnhac.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(11, 74);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -180,7 +181,7 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel5.Location = new System.Drawing.Point(51, 156);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(207, 2);
             this.panel5.TabIndex = 11;
@@ -189,7 +190,7 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel6.Location = new System.Drawing.Point(51, 102);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(207, 2);
             this.panel6.TabIndex = 8;
@@ -211,7 +212,7 @@
             this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Location = new System.Drawing.Point(51, 144);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(207, 13);
             this.txtPassword.TabIndex = 9;
@@ -237,7 +238,7 @@
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignIn.ForeColor = System.Drawing.Color.Purple;
             this.btnSignIn.Location = new System.Drawing.Point(76, 222);
-            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(127, 41);
             this.btnSignIn.TabIndex = 1;
@@ -274,7 +275,7 @@
             this.txtUserName.BackColor = System.Drawing.SystemColors.Control;
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserName.Location = new System.Drawing.Point(51, 90);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(207, 13);
             this.txtUserName.TabIndex = 2;
@@ -287,7 +288,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
             this.panel2.ResumeLayout(false);

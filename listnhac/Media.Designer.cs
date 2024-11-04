@@ -37,51 +37,45 @@
             this.btnVideo = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnNoPlaying = new System.Windows.Forms.Button();
-            this.picAvt = new System.Windows.Forms.PictureBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabMusic = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dgvMusic = new System.Windows.Forms.DataGridView();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cmbSort = new System.Windows.Forms.ComboBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnShuffle = new System.Windows.Forms.Button();
+            this.dgvMusic = new System.Windows.Forms.DataGridView();
             this.lblMusic = new System.Windows.Forms.Label();
             this.playMusic = new AxWMPLib.AxWindowsMediaPlayer();
             this.tabVideos = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dgvVideos = new System.Windows.Forms.DataGridView();
+            this.dgvVideo = new System.Windows.Forms.DataGridView();
             this.btnAddVideo = new System.Windows.Forms.Button();
-            this.btnRemoveVideo = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnRemoveVid = new System.Windows.Forms.Button();
+            this.cmpSortVideo = new System.Windows.Forms.ComboBox();
             this.btnAll = new System.Windows.Forms.Button();
             this.lblVideo = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.p_bar = new System.Windows.Forms.ProgressBar();
+            this.lblTimeEnd = new System.Windows.Forms.Label();
+            this.lblTimeStart = new System.Windows.Forms.Label();
             this.panelPlay = new System.Windows.Forms.Panel();
+            this.btnPause = new System.Windows.Forms.Button();
             this.btnPlay = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
-            this.btnPause = new System.Windows.Forms.Button();
-            this.lblTimeStart = new System.Windows.Forms.Label();
-            this.lblTimeEnd = new System.Windows.Forms.Label();
-            this.p_bar = new System.Windows.Forms.ProgressBar();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.lbl_trackend = new System.Windows.Forms.Label();
-            this.btnChon = new System.Windows.Forms.Button();
-            this.colLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coltitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMusic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.picAvt = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).BeginInit();
             this.tab.SuspendLayout();
             this.tabMusic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playMusic)).BeginInit();
             this.tabVideos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVideos)).BeginInit();
-            this.panelPlay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVideo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.panelPlay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -142,12 +136,12 @@
             this.btnSelectSong.Location = new System.Drawing.Point(51, 225);
             this.btnSelectSong.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelectSong.Name = "btnSelectSong";
-            this.btnSelectSong.Size = new System.Drawing.Size(146, 31);
+            this.btnSelectSong.Size = new System.Drawing.Size(144, 31);
             this.btnSelectSong.TabIndex = 5;
             this.btnSelectSong.Text = "SelectSong";
             this.btnSelectSong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSelectSong.UseVisualStyleBackColor = false;
-            this.btnSelectSong.Click += new System.EventHandler(this.btnSelectSong_Click);
+            this.btnSelectSong.Click += new System.EventHandler(this.btnMusic_Click);
             // 
             // btnPlaylist
             // 
@@ -166,6 +160,7 @@
             this.btnPlaylist.Text = "Playlists";
             this.btnPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlaylist.UseVisualStyleBackColor = false;
+            this.btnPlaylist.Click += new System.EventHandler(this.btnPlaylist_Click);
             // 
             // btnVideo
             // 
@@ -195,9 +190,9 @@
             this.lblUser.Location = new System.Drawing.Point(46, 89);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(77, 19);
+            this.lblUser.Size = new System.Drawing.Size(89, 19);
             this.lblUser.TabIndex = 2;
-            this.lblUser.Text = "Media App";
+            this.lblUser.Text = " Cong Thanh";
             // 
             // btnNoPlaying
             // 
@@ -218,40 +213,26 @@
             this.btnNoPlaying.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNoPlaying.UseVisualStyleBackColor = false;
             // 
-            // picAvt
-            // 
-            this.picAvt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAvt.BackgroundImage")));
-            this.picAvt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picAvt.ErrorImage = null;
-            this.picAvt.InitialImage = null;
-            this.picAvt.Location = new System.Drawing.Point(53, 16);
-            this.picAvt.Margin = new System.Windows.Forms.Padding(2);
-            this.picAvt.Name = "picAvt";
-            this.picAvt.Size = new System.Drawing.Size(62, 53);
-            this.picAvt.TabIndex = 0;
-            this.picAvt.TabStop = false;
-            // 
             // tab
             // 
             this.tab.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tab.Controls.Add(this.tabMusic);
             this.tab.Controls.Add(this.tabVideos);
-            this.tab.Location = new System.Drawing.Point(196, 2);
+            this.tab.Location = new System.Drawing.Point(196, 30);
             this.tab.Margin = new System.Windows.Forms.Padding(2);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
-            this.tab.Size = new System.Drawing.Size(554, 475);
+            this.tab.Size = new System.Drawing.Size(554, 447);
             this.tab.TabIndex = 1;
             // 
             // tabMusic
             // 
-            this.tabMusic.Controls.Add(this.button1);
-            this.tabMusic.Controls.Add(this.dgvMusic);
+            this.tabMusic.Controls.Add(this.btnEdit);
             this.tabMusic.Controls.Add(this.btnDelete);
             this.tabMusic.Controls.Add(this.cmbSort);
-            this.tabMusic.Controls.Add(this.btnExit);
             this.tabMusic.Controls.Add(this.btnAdd);
             this.tabMusic.Controls.Add(this.btnShuffle);
+            this.tabMusic.Controls.Add(this.dgvMusic);
             this.tabMusic.Controls.Add(this.lblMusic);
             this.tabMusic.Controls.Add(this.playMusic);
             this.tabMusic.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -259,46 +240,29 @@
             this.tabMusic.Margin = new System.Windows.Forms.Padding(2);
             this.tabMusic.Name = "tabMusic";
             this.tabMusic.Padding = new System.Windows.Forms.Padding(2);
-            this.tabMusic.Size = new System.Drawing.Size(546, 449);
+            this.tabMusic.Size = new System.Drawing.Size(546, 421);
             this.tabMusic.TabIndex = 0;
             this.tabMusic.Text = "Playing";
             this.tabMusic.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnEdit
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(255, 71);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 32);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dgvMusic
-            // 
-            this.dgvMusic.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMusic.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dgvMusic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusic.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMusic,
-            this.coltitle,
-            this.colLink});
-            this.dgvMusic.Location = new System.Drawing.Point(2, 139);
-            this.dgvMusic.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvMusic.Name = "dgvMusic";
-            this.dgvMusic.RowHeadersWidth = 51;
-            this.dgvMusic.RowTemplate.Height = 24;
-            this.dgvMusic.Size = new System.Drawing.Size(538, 306);
-            this.dgvMusic.TabIndex = 15;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(316, 71);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(47, 32);
+            this.btnEdit.TabIndex = 15;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(332, 72);
+            this.btnDelete.Location = new System.Drawing.Point(368, 71);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(74, 32);
@@ -317,32 +281,13 @@
             this.cmbSort.Name = "cmbSort";
             this.cmbSort.Size = new System.Drawing.Size(78, 21);
             this.cmbSort.TabIndex = 13;
-            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btnExit.Location = new System.Drawing.Point(513, 4);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(22, 24);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged_1);
             // 
             // btnAdd
             // 
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(427, 71);
+            this.btnAdd.Location = new System.Drawing.Point(447, 71);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(93, 32);
@@ -369,6 +314,20 @@
             this.btnShuffle.UseVisualStyleBackColor = false;
             this.btnShuffle.Click += new System.EventHandler(this.btnShuffle_Click);
             // 
+            // dgvMusic
+            // 
+            this.dgvMusic.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMusic.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dgvMusic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMusic.Location = new System.Drawing.Point(4, 106);
+            this.dgvMusic.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMusic.Name = "dgvMusic";
+            this.dgvMusic.RowHeadersWidth = 51;
+            this.dgvMusic.RowTemplate.Height = 24;
+            this.dgvMusic.Size = new System.Drawing.Size(538, 306);
+            this.dgvMusic.TabIndex = 10;
+            this.dgvMusic.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMusic_CellContentClick);
+            // 
             // lblMusic
             // 
             this.lblMusic.AutoSize = true;
@@ -392,11 +351,10 @@
             // 
             // tabVideos
             // 
-            this.tabVideos.Controls.Add(this.button5);
-            this.tabVideos.Controls.Add(this.dgvVideos);
+            this.tabVideos.Controls.Add(this.dgvVideo);
             this.tabVideos.Controls.Add(this.btnAddVideo);
-            this.tabVideos.Controls.Add(this.btnRemoveVideo);
-            this.tabVideos.Controls.Add(this.comboBox1);
+            this.tabVideos.Controls.Add(this.btnRemoveVid);
+            this.tabVideos.Controls.Add(this.cmpSortVideo);
             this.tabVideos.Controls.Add(this.btnAll);
             this.tabVideos.Controls.Add(this.lblVideo);
             this.tabVideos.Cursor = System.Windows.Forms.Cursors.Default;
@@ -404,41 +362,23 @@
             this.tabVideos.Margin = new System.Windows.Forms.Padding(2);
             this.tabVideos.Name = "tabVideos";
             this.tabVideos.Padding = new System.Windows.Forms.Padding(2);
-            this.tabVideos.Size = new System.Drawing.Size(546, 449);
+            this.tabVideos.Size = new System.Drawing.Size(546, 421);
             this.tabVideos.TabIndex = 1;
             this.tabVideos.Text = "Videos";
             this.tabVideos.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // dgvVideo
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button5.Location = new System.Drawing.Point(523, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(22, 24);
-            this.button5.TabIndex = 19;
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // dgvVideos
-            // 
-            this.dgvVideos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dgvVideos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVideos.Location = new System.Drawing.Point(4, 146);
-            this.dgvVideos.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvVideos.Name = "dgvVideos";
-            this.dgvVideos.RowHeadersWidth = 51;
-            this.dgvVideos.RowTemplate.Height = 24;
-            this.dgvVideos.Size = new System.Drawing.Size(538, 299);
-            this.dgvVideos.TabIndex = 18;
+            this.dgvVideo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dgvVideo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVideo.Location = new System.Drawing.Point(4, 146);
+            this.dgvVideo.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvVideo.Name = "dgvVideo";
+            this.dgvVideo.RowHeadersWidth = 51;
+            this.dgvVideo.RowTemplate.Height = 24;
+            this.dgvVideo.Size = new System.Drawing.Size(534, 274);
+            this.dgvVideo.TabIndex = 18;
+            this.dgvVideo.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVideo_CellContentDoubleClick);
             // 
             // btnAddVideo
             // 
@@ -453,28 +393,30 @@
             this.btnAddVideo.UseVisualStyleBackColor = true;
             this.btnAddVideo.Click += new System.EventHandler(this.btnAddVideo_Click);
             // 
-            // btnRemoveVideo
+            // btnRemoveVid
             // 
-            this.btnRemoveVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveVideo.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveVideo.Location = new System.Drawing.Point(352, 76);
-            this.btnRemoveVideo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRemoveVideo.Name = "btnRemoveVideo";
-            this.btnRemoveVideo.Size = new System.Drawing.Size(76, 32);
-            this.btnRemoveVideo.TabIndex = 15;
-            this.btnRemoveVideo.Text = "Remove";
-            this.btnRemoveVideo.UseVisualStyleBackColor = true;
+            this.btnRemoveVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveVid.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveVid.Location = new System.Drawing.Point(352, 76);
+            this.btnRemoveVid.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemoveVid.Name = "btnRemoveVid";
+            this.btnRemoveVid.Size = new System.Drawing.Size(76, 32);
+            this.btnRemoveVid.TabIndex = 15;
+            this.btnRemoveVid.Text = "Remove";
+            this.btnRemoveVid.UseVisualStyleBackColor = true;
+            this.btnRemoveVid.Click += new System.EventHandler(this.btnRemoveVid_Click);
             // 
-            // comboBox1
+            // cmpSortVideo
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(448, 113);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(78, 21);
-            this.comboBox1.TabIndex = 14;
+            this.cmpSortVideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.cmpSortVideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmpSortVideo.FormattingEnabled = true;
+            this.cmpSortVideo.Location = new System.Drawing.Point(448, 113);
+            this.cmpSortVideo.Margin = new System.Windows.Forms.Padding(2);
+            this.cmpSortVideo.Name = "cmpSortVideo";
+            this.cmpSortVideo.Size = new System.Drawing.Size(78, 21);
+            this.cmpSortVideo.TabIndex = 14;
+            this.cmpSortVideo.SelectedIndexChanged += new System.EventHandler(this.cmpSortVideo_SelectedIndexChanged);
             // 
             // btnAll
             // 
@@ -485,13 +427,14 @@
             this.btnAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAll.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAll.ForeColor = System.Drawing.Color.White;
-            this.btnAll.Location = new System.Drawing.Point(21, 72);
+            this.btnAll.Location = new System.Drawing.Point(9, 76);
             this.btnAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(94, 31);
             this.btnAll.TabIndex = 12;
             this.btnAll.Text = "Play all";
             this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // lblVideo
             // 
@@ -504,27 +447,82 @@
             this.lblVideo.TabIndex = 10;
             this.lblVideo.Text = "Video";
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(435, 6);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(106, 45);
+            this.trackBar1.TabIndex = 24;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // p_bar
+            // 
+            this.p_bar.Location = new System.Drawing.Point(46, 9);
+            this.p_bar.Margin = new System.Windows.Forms.Padding(2);
+            this.p_bar.Name = "p_bar";
+            this.p_bar.Size = new System.Drawing.Size(346, 5);
+            this.p_bar.TabIndex = 21;
+            this.p_bar.Click += new System.EventHandler(this.p_bar_Click);
+            // 
+            // lblTimeEnd
+            // 
+            this.lblTimeEnd.AutoSize = true;
+            this.lblTimeEnd.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeEnd.ForeColor = System.Drawing.Color.White;
+            this.lblTimeEnd.Location = new System.Drawing.Point(398, 2);
+            this.lblTimeEnd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTimeEnd.Name = "lblTimeEnd";
+            this.lblTimeEnd.Size = new System.Drawing.Size(34, 13);
+            this.lblTimeEnd.TabIndex = 25;
+            this.lblTimeEnd.Text = "00:00";
+            // 
+            // lblTimeStart
+            // 
+            this.lblTimeStart.AutoSize = true;
+            this.lblTimeStart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimeStart.ForeColor = System.Drawing.Color.White;
+            this.lblTimeStart.Location = new System.Drawing.Point(9, 2);
+            this.lblTimeStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTimeStart.Name = "lblTimeStart";
+            this.lblTimeStart.Size = new System.Drawing.Size(34, 13);
+            this.lblTimeStart.TabIndex = 26;
+            this.lblTimeStart.Text = "00:00";
+            // 
             // panelPlay
             // 
             this.panelPlay.BackColor = System.Drawing.Color.Purple;
+            this.panelPlay.Controls.Add(this.btnPause);
             this.panelPlay.Controls.Add(this.btnPlay);
             this.panelPlay.Controls.Add(this.btnStop);
             this.panelPlay.Controls.Add(this.btnPrevious);
             this.panelPlay.Controls.Add(this.btnNext);
-            this.panelPlay.Controls.Add(this.btnPause);
             this.panelPlay.Controls.Add(this.lblTimeStart);
             this.panelPlay.Controls.Add(this.lblTimeEnd);
             this.panelPlay.Controls.Add(this.p_bar);
             this.panelPlay.Controls.Add(this.trackBar1);
-            this.panelPlay.Controls.Add(this.lbl_trackend);
-            this.panelPlay.Controls.Add(this.btnChon);
-            this.panelPlay.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPlay.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.panelPlay.Location = new System.Drawing.Point(196, 481);
+            this.panelPlay.Location = new System.Drawing.Point(196, 480);
             this.panelPlay.Margin = new System.Windows.Forms.Padding(2);
             this.panelPlay.Name = "panelPlay";
-            this.panelPlay.Size = new System.Drawing.Size(554, 60);
+            this.panelPlay.Size = new System.Drawing.Size(554, 61);
             this.panelPlay.TabIndex = 7;
+            // 
+            // btnPause
+            // 
+            this.btnPause.BackColor = System.Drawing.Color.Purple;
+            this.btnPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPause.BackgroundImage")));
+            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.ForeColor = System.Drawing.Color.Purple;
+            this.btnPause.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPause.Location = new System.Drawing.Point(183, 21);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(32, 30);
+            this.btnPause.TabIndex = 28;
+            this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // btnPlay
             // 
@@ -590,103 +588,37 @@
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // btnPause
+            // btnExit
             // 
-            this.btnPause.BackColor = System.Drawing.Color.Purple;
-            this.btnPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPause.BackgroundImage")));
-            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.ForeColor = System.Drawing.Color.Purple;
-            this.btnPause.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPause.Location = new System.Drawing.Point(184, 19);
-            this.btnPause.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(32, 30);
-            this.btnPause.TabIndex = 28;
-            this.btnPause.UseVisualStyleBackColor = false;
-            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnExit.Location = new System.Drawing.Point(725, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(22, 24);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // lblTimeStart
+            // picAvt
             // 
-            this.lblTimeStart.AutoSize = true;
-            this.lblTimeStart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeStart.ForeColor = System.Drawing.Color.White;
-            this.lblTimeStart.Location = new System.Drawing.Point(9, 2);
-            this.lblTimeStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTimeStart.Name = "lblTimeStart";
-            this.lblTimeStart.Size = new System.Drawing.Size(34, 13);
-            this.lblTimeStart.TabIndex = 26;
-            this.lblTimeStart.Text = "00:00";
-            // 
-            // lblTimeEnd
-            // 
-            this.lblTimeEnd.AutoSize = true;
-            this.lblTimeEnd.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeEnd.ForeColor = System.Drawing.Color.White;
-            this.lblTimeEnd.Location = new System.Drawing.Point(398, 2);
-            this.lblTimeEnd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTimeEnd.Name = "lblTimeEnd";
-            this.lblTimeEnd.Size = new System.Drawing.Size(34, 13);
-            this.lblTimeEnd.TabIndex = 25;
-            this.lblTimeEnd.Text = "00:00";
-            // 
-            // p_bar
-            // 
-            this.p_bar.Location = new System.Drawing.Point(46, 9);
-            this.p_bar.Margin = new System.Windows.Forms.Padding(2);
-            this.p_bar.Name = "p_bar";
-            this.p_bar.Size = new System.Drawing.Size(346, 5);
-            this.p_bar.TabIndex = 21;
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(435, 6);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(106, 45);
-            this.trackBar1.TabIndex = 24;
-            // 
-            // lbl_trackend
-            // 
-            this.lbl_trackend.AutoSize = true;
-            this.lbl_trackend.Font = new System.Drawing.Font("Engravers MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_trackend.ForeColor = System.Drawing.Color.Black;
-            this.lbl_trackend.Location = new System.Drawing.Point(731, -6);
-            this.lbl_trackend.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_trackend.Name = "lbl_trackend";
-            this.lbl_trackend.Size = new System.Drawing.Size(60, 19);
-            this.lbl_trackend.TabIndex = 23;
-            this.lbl_trackend.Text = "00:00";
-            // 
-            // btnChon
-            // 
-            this.btnChon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnChon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChon.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnChon.Location = new System.Drawing.Point(704, 24);
-            this.btnChon.Margin = new System.Windows.Forms.Padding(2);
-            this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(8, 8);
-            this.btnChon.TabIndex = 20;
-            this.btnChon.UseVisualStyleBackColor = true;
-            // 
-            // colLink
-            // 
-            this.colLink.HeaderText = "Nguồn";
-            this.colLink.MinimumWidth = 6;
-            this.colLink.Name = "colLink";
-            // 
-            // coltitle
-            // 
-            this.coltitle.HeaderText = "title";
-            this.coltitle.MinimumWidth = 6;
-            this.coltitle.Name = "coltitle";
-            // 
-            // colMusic
-            // 
-            this.colMusic.HeaderText = "Music";
-            this.colMusic.MinimumWidth = 6;
-            this.colMusic.Name = "colMusic";
+            this.picAvt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAvt.BackgroundImage")));
+            this.picAvt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picAvt.ErrorImage = null;
+            this.picAvt.InitialImage = null;
+            this.picAvt.Location = new System.Drawing.Point(53, 16);
+            this.picAvt.Margin = new System.Windows.Forms.Padding(2);
+            this.picAvt.Name = "picAvt";
+            this.picAvt.Size = new System.Drawing.Size(62, 53);
+            this.picAvt.TabIndex = 0;
+            this.picAvt.TabStop = false;
             // 
             // frmMedia
             // 
@@ -696,6 +628,7 @@
             this.ClientSize = new System.Drawing.Size(750, 541);
             this.Controls.Add(this.panelPlay);
             this.Controls.Add(this.tab);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -703,7 +636,6 @@
             this.Load += new System.EventHandler(this.frmMedia_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).EndInit();
             this.tab.ResumeLayout(false);
             this.tabMusic.ResumeLayout(false);
             this.tabMusic.PerformLayout();
@@ -711,10 +643,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.playMusic)).EndInit();
             this.tabVideos.ResumeLayout(false);
             this.tabVideos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVideos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVideo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panelPlay.ResumeLayout(false);
             this.panelPlay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -732,37 +665,31 @@
         private System.Windows.Forms.TabPage tabVideos;
         private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Panel panelPlay;
-        private System.Windows.Forms.Label lbl_trackend;
-        private System.Windows.Forms.ProgressBar p_bar;
-        private System.Windows.Forms.Button btnChon;
-        private System.Windows.Forms.TrackBar trackBar1;
         private AxWMPLib.AxWindowsMediaPlayer playMusic;
-        private System.Windows.Forms.Label lblTimeStart;
-        private System.Windows.Forms.Label lblTimeEnd;
         private System.Windows.Forms.Button btnShuffle;
+        private System.Windows.Forms.DataGridView dgvMusic;
         private System.Windows.Forms.Label lblMusic;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbSort;
-        private System.Windows.Forms.Button btnPause;
-        private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Label lblVideo;
-        private System.Windows.Forms.Button btnRemoveVideo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnRemoveVid;
+        private System.Windows.Forms.ComboBox cmpSortVideo;
         private System.Windows.Forms.Button btnAddVideo;
-        private System.Windows.Forms.DataGridView dgvVideos;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvMusic;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMusic;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coltitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colLink;
+        private System.Windows.Forms.DataGridView dgvVideo;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.ProgressBar p_bar;
+        private System.Windows.Forms.Label lblTimeEnd;
+        private System.Windows.Forms.Label lblTimeStart;
+        private System.Windows.Forms.Button btnPause;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Panel panelPlay;
     }
 }
 
