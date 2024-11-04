@@ -21,6 +21,9 @@ namespace listnhac
         public frmAddPlayList()
         {
             InitializeComponent();
+            txtNamePlaylist.MaxLength = 100;
+            txtDescription.MaxLength = 500;
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -28,25 +31,10 @@ namespace listnhac
             Application.Exit();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void txtNamePlaylist_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescription_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string playlistName = txtNamePlaylist.Text;
-            string description = txtDescription.Text;
+            string playlistName = txtNamePlaylist.Text.Trim();
+            string description = txtDescription.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(playlistName))
             {
@@ -58,11 +46,14 @@ namespace listnhac
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO Playlists (Name, Description, CreatedDate) VALUES (@Name, @Description, @CreatedDate)";
+                    string query = @"INSERT INTO Playlists (Name, Description, CreatedDate) 
+                                   VALUES (@Name, @Description, @CreatedDate)";
+
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@Name", playlistName);
-                        cmd.Parameters.AddWithValue("@Description", description);
+                        cmd.Parameters.AddWithValue("@Description",
+                            string.IsNullOrEmpty(description) ? (object)DBNull.Value : description);
                         cmd.Parameters.AddWithValue("@CreatedDate", DateTime.Now);
 
                         conn.Open();
@@ -71,6 +62,7 @@ namespace listnhac
                 }
 
                 MessageBox.Show("Thêm playlist thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)
@@ -79,9 +71,10 @@ namespace listnhac
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

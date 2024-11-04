@@ -17,9 +17,7 @@ namespace listnhac.Model
         public virtual DbSet<PlaylistVideo> PlaylistVideos { get; set; }
         public virtual DbSet<Song> Songs { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserSession> UserSessions { get; set; }
         public virtual DbSet<Video> Videos { get; set; }
-        public virtual DbSet<UserSong> UserSongs { get; set; } 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,9 +35,6 @@ namespace listnhac.Model
                 .HasMany(e => e.PlaylistSongs)
                 .WithRequired(e => e.Song)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<UserSong>() 
-                .HasKey(us => new { us.UserId, us.SongId }); 
 
             modelBuilder.Entity<Video>()
                 .HasMany(e => e.PlaylistVideos)

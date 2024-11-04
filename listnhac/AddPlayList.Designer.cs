@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 36);
             this.panel1.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             this.pictureBox1.Image = global::listnhac.Properties.Resources.musical_note;
             this.pictureBox1.Location = new System.Drawing.Point(13, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -81,7 +81,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExit.Location = new System.Drawing.Point(471, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(39, 36);
             this.btnExit.TabIndex = 1;
@@ -104,7 +104,7 @@
             // 
             this.txtNamePlaylist.BackColor = System.Drawing.Color.White;
             this.txtNamePlaylist.Location = new System.Drawing.Point(42, 312);
-            this.txtNamePlaylist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNamePlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.txtNamePlaylist.Name = "txtNamePlaylist";
             this.txtNamePlaylist.Size = new System.Drawing.Size(210, 20);
             this.txtNamePlaylist.TabIndex = 1;
@@ -117,7 +117,7 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 36);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(510, 202);
             this.panel2.TabIndex = 2;
@@ -140,7 +140,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Silver;
             this.pictureBox2.Image = global::listnhac.Properties.Resources.music;
             this.pictureBox2.Location = new System.Drawing.Point(74, 65);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(94, 83);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,7 +163,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.Location = new System.Drawing.Point(0, 238);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(511, 2);
             this.panel3.TabIndex = 4;
@@ -196,7 +196,7 @@
             // 
             this.txtDescription.BackColor = System.Drawing.Color.White;
             this.txtDescription.Location = new System.Drawing.Point(42, 383);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(210, 20);
             this.txtDescription.TabIndex = 6;
@@ -206,7 +206,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(125, 437);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 40);
             this.btnAdd.TabIndex = 8;
@@ -219,7 +219,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(276, 437);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(85, 40);
             this.btnCancel.TabIndex = 9;
@@ -244,7 +244,7 @@
             this.Controls.Add(this.txtNamePlaylist);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAddPlayList";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

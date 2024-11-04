@@ -12,7 +12,6 @@ namespace listnhac.Model
         public User()
         {
             Playlists = new HashSet<Playlist>();
-            UserSessions = new HashSet<UserSession>();
         }
 
         public int UserID { get; set; }
@@ -36,8 +35,5 @@ namespace listnhac.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Playlist> Playlists { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UserSession> UserSessions { get; set; }
     }
 }

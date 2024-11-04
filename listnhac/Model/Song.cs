@@ -20,9 +20,6 @@ namespace listnhac.Model
         [StringLength(100)]
         public string Title { get; set; }
 
-        [StringLength(100)]
-        public string Artist { get; set; }
-
         public int? Duration { get; set; }
 
         [Required]

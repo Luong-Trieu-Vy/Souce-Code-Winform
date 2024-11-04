@@ -141,7 +141,6 @@
     <Compile Include="Model\PlaylistVideo.cs" />
     <Compile Include="Model\Song.cs" />
     <Compile Include="Model\User.cs" />
-    <Compile Include="Model\UserSession.cs" />
     <Compile Include="Model\Video.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

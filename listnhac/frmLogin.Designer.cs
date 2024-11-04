@@ -34,7 +34,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.checkBoxLuuDangNhap = new System.Windows.Forms.CheckBox();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -123,7 +122,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.checkBoxLuuDangNhap);
             this.panel4.Controls.Add(this.btnSignUp);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.pictureBox1);
@@ -141,16 +139,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(299, 367);
             this.panel4.TabIndex = 8;
-            // 
-            // checkBoxLuuDangNhap
-            // 
-            this.checkBoxLuuDangNhap.AutoSize = true;
-            this.checkBoxLuuDangNhap.Location = new System.Drawing.Point(92, 182);
-            this.checkBoxLuuDangNhap.Name = "checkBoxLuuDangNhap";
-            this.checkBoxLuuDangNhap.Size = new System.Drawing.Size(111, 17);
-            this.checkBoxLuuDangNhap.TabIndex = 15;
-            this.checkBoxLuuDangNhap.Text = "Lưu Đăng Nhập ?";
-            this.checkBoxLuuDangNhap.UseVisualStyleBackColor = true;
             // 
             // btnSignUp
             // 
@@ -332,7 +320,6 @@
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.CheckBox checkBoxLuuDangNhap;
         private System.Windows.Forms.Button btnExit;
     }
 }

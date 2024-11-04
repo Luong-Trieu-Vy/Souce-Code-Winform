@@ -81,7 +81,7 @@
             this.panel2.Controls.Add(this.lblNameSong);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(315, 501);
             this.panel2.TabIndex = 1;
@@ -90,7 +90,7 @@
             // 
             this.pictureBox1.Image = global::listnhac.Properties.Resources.spotify1;
             this.pictureBox1.Location = new System.Drawing.Point(106, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,7 +114,7 @@
             // 
             this.txtNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNo.Location = new System.Drawing.Point(56, 402);
-            this.txtNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNo.Name = "txtNo";
             this.txtNo.Size = new System.Drawing.Size(159, 24);
             this.txtNo.TabIndex = 11;
@@ -134,7 +134,7 @@
             // 
             this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTime.Location = new System.Drawing.Point(56, 328);
-            this.txtTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(2);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(84, 24);
             this.txtTime.TabIndex = 9;
@@ -154,7 +154,7 @@
             // 
             this.txtAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAuthor.Location = new System.Drawing.Point(56, 249);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAuthor.Margin = new System.Windows.Forms.Padding(2);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(159, 24);
             this.txtAuthor.TabIndex = 7;
@@ -174,7 +174,7 @@
             // 
             this.txtNameSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameSong.Location = new System.Drawing.Point(56, 179);
-            this.txtNameSong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNameSong.Margin = new System.Windows.Forms.Padding(2);
             this.txtNameSong.Name = "txtNameSong";
             this.txtNameSong.Size = new System.Drawing.Size(159, 24);
             this.txtNameSong.TabIndex = 1;
@@ -203,7 +203,7 @@
             this.panel3.Controls.Add(this.dgvSong);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(315, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(561, 501);
             this.panel3.TabIndex = 2;
@@ -215,7 +215,7 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(528, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(33, 27);
             this.btnExit.TabIndex = 14;
@@ -229,7 +229,7 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Location = new System.Drawing.Point(87, 41);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(36, 30);
             this.btnDelete.TabIndex = 13;
@@ -242,7 +242,7 @@
             this.btnPlayAll.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnPlayAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayAll.Location = new System.Drawing.Point(21, 28);
-            this.btnPlayAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPlayAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlayAll.Name = "btnPlayAll";
             this.btnPlayAll.Size = new System.Drawing.Size(50, 44);
             this.btnPlayAll.TabIndex = 12;
@@ -255,7 +255,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(484, 53);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(25, 19);
             this.button1.TabIndex = 9;
@@ -265,7 +265,7 @@
             // 
             this.txtSearch.BackColor = System.Drawing.SystemColors.Menu;
             this.txtSearch.Location = new System.Drawing.Point(329, 53);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(159, 20);
             this.txtSearch.TabIndex = 3;
@@ -298,7 +298,7 @@
             this.panelPlay.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelPlay.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panelPlay.Location = new System.Drawing.Point(0, 441);
-            this.panelPlay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPlay.Margin = new System.Windows.Forms.Padding(2);
             this.panelPlay.Name = "panelPlay";
             this.panelPlay.Size = new System.Drawing.Size(561, 60);
             this.panelPlay.TabIndex = 8;
@@ -312,7 +312,7 @@
             this.btnPlay.ForeColor = System.Drawing.Color.Purple;
             this.btnPlay.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPlay.Location = new System.Drawing.Point(154, 19);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(25, 30);
             this.btnPlay.TabIndex = 32;
@@ -328,7 +328,7 @@
             this.btnStop.ForeColor = System.Drawing.Color.Purple;
             this.btnStop.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStop.Location = new System.Drawing.Point(220, 20);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(34, 29);
             this.btnStop.TabIndex = 31;
@@ -344,7 +344,7 @@
             this.btnPrevious.ForeColor = System.Drawing.Color.Purple;
             this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPrevious.Location = new System.Drawing.Point(114, 20);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(36, 29);
             this.btnPrevious.TabIndex = 30;
@@ -360,7 +360,7 @@
             this.btnNext.ForeColor = System.Drawing.Color.Purple;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNext.Location = new System.Drawing.Point(259, 20);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(25, 30);
             this.btnNext.TabIndex = 29;
@@ -376,7 +376,7 @@
             this.btnPause.ForeColor = System.Drawing.Color.Purple;
             this.btnPause.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPause.Location = new System.Drawing.Point(184, 19);
-            this.btnPause.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(2);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(32, 30);
             this.btnPause.TabIndex = 28;
@@ -410,7 +410,7 @@
             // p_bar
             // 
             this.p_bar.Location = new System.Drawing.Point(46, 9);
-            this.p_bar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.p_bar.Margin = new System.Windows.Forms.Padding(2);
             this.p_bar.Name = "p_bar";
             this.p_bar.Size = new System.Drawing.Size(346, 5);
             this.p_bar.TabIndex = 21;
@@ -418,7 +418,7 @@
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(435, 6);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(106, 45);
             this.trackBar1.TabIndex = 24;
@@ -441,7 +441,7 @@
             this.btnChon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChon.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnChon.Location = new System.Drawing.Point(704, 24);
-            this.btnChon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChon.Margin = new System.Windows.Forms.Padding(2);
             this.btnChon.Name = "btnChon";
             this.btnChon.Size = new System.Drawing.Size(8, 8);
             this.btnChon.TabIndex = 20;
@@ -451,7 +451,7 @@
             // 
             this.dgvSong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSong.Location = new System.Drawing.Point(0, 89);
-            this.dgvSong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSong.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSong.Name = "dgvSong";
             this.dgvSong.RowHeadersWidth = 51;
             this.dgvSong.RowTemplate.Height = 24;
@@ -467,7 +467,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Display_Songs";
             this.Text = "Display_Songs";
             this.panel2.ResumeLayout(false);

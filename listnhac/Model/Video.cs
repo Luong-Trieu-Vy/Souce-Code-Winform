@@ -20,19 +20,9 @@ namespace listnhac.Model
         [StringLength(100)]
         public string Title { get; set; }
 
-        [StringLength(500)]
-        public string Description { get; set; }
-
-        public int? Duration { get; set; }
-
         [Required]
         [StringLength(500)]
         public string FilePath { get; set; }
-
-        [StringLength(500)]
-        public string ThumbnailPath { get; set; }
-
-        public DateTime? UploadDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlaylistVideo> PlaylistVideos { get; set; }

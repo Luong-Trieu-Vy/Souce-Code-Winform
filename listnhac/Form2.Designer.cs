@@ -32,21 +32,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblVol = new System.Windows.Forms.Label();
-            this.track_list = new System.Windows.Forms.ListBox();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.btnPlay = new System.Windows.Forms.Button();
-            this.btnPause = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
             this.player = new AxWMPLib.AxWindowsMediaPlayer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblVol = new System.Windows.Forms.Label();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnPause = new System.Windows.Forms.Button();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.track_list = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -83,6 +83,16 @@
             this.progressBar1.Size = new System.Drawing.Size(645, 8);
             this.progressBar1.TabIndex = 11;
             // 
+            // player
+            // 
+            this.player.Enabled = true;
+            this.player.Location = new System.Drawing.Point(2, -2);
+            this.player.Margin = new System.Windows.Forms.Padding(2);
+            this.player.Name = "player";
+            this.player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player.OcxState")));
+            this.player.Size = new System.Drawing.Size(835, 295);
+            this.player.TabIndex = 14;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
@@ -106,34 +116,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Controls";
             // 
-            // btnNext
-            // 
-            this.btnNext.BackgroundImage = global::listnhac.Properties.Resources.forward;
-            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.ForeColor = System.Drawing.Color.Lime;
-            this.btnNext.Location = new System.Drawing.Point(364, 17);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(79, 31);
-            this.btnNext.TabIndex = 8;
-            this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Lime;
-            this.label1.Location = new System.Drawing.Point(619, 72);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "0%";
-            // 
             // lblVol
             // 
             this.lblVol.AutoSize = true;
@@ -147,72 +129,20 @@
             this.lblVol.TabIndex = 2;
             this.lblVol.Text = "Volume";
             // 
-            // track_list
+            // btnPrevious
             // 
-            this.track_list.BackColor = System.Drawing.Color.LightGray;
-            this.track_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.track_list.FormattingEnabled = true;
-            this.track_list.Location = new System.Drawing.Point(20, 61);
-            this.track_list.Margin = new System.Windows.Forms.Padding(2);
-            this.track_list.Name = "track_list";
-            this.track_list.Size = new System.Drawing.Size(554, 95);
-            this.track_list.TabIndex = 6;
-            this.track_list.SelectedIndexChanged += new System.EventHandler(this.track_list_SelectedIndexChanged);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(588, 17);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 128);
-            this.trackBar1.TabIndex = 5;
-            // 
-            // btnStop
-            // 
-            this.btnStop.BackgroundImage = global::listnhac.Properties.Resources.play_pause;
-            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnStop.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnStop.FlatAppearance.BorderSize = 0;
-            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStop.ForeColor = System.Drawing.Color.Lime;
-            this.btnStop.Location = new System.Drawing.Point(269, 17);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(79, 31);
-            this.btnStop.TabIndex = 4;
-            this.btnStop.UseVisualStyleBackColor = true;
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.BackgroundImage = global::listnhac.Properties.Resources.play1;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnPlay.FlatAppearance.BorderSize = 0;
-            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.ForeColor = System.Drawing.Color.Lime;
-            this.btnPlay.Location = new System.Drawing.Point(103, 17);
-            this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(79, 31);
-            this.btnPlay.TabIndex = 3;
-            this.btnPlay.UseVisualStyleBackColor = true;
-            // 
-            // btnPause
-            // 
-            this.btnPause.BackgroundImage = global::listnhac.Properties.Resources.pause__1____Copy;
-            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPause.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnPause.FlatAppearance.BorderSize = 0;
-            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.ForeColor = System.Drawing.Color.Lime;
-            this.btnPause.Location = new System.Drawing.Point(186, 17);
-            this.btnPause.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(79, 31);
-            this.btnPause.TabIndex = 2;
-            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPrevious.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrevious.BackgroundImage")));
+            this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPrevious.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnPrevious.FlatAppearance.BorderSize = 0;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.ForeColor = System.Drawing.Color.Lime;
+            this.btnPrevious.Location = new System.Drawing.Point(20, 17);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(79, 31);
+            this.btnPrevious.TabIndex = 0;
+            this.btnPrevious.UseVisualStyleBackColor = true;
             // 
             // btnOpen
             // 
@@ -230,30 +160,100 @@
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
-            // btnPrevious
+            // btnPause
             // 
-            this.btnPrevious.BackgroundImage = global::listnhac.Properties.Resources.rewind;
-            this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnPrevious.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnPrevious.FlatAppearance.BorderSize = 0;
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.ForeColor = System.Drawing.Color.Lime;
-            this.btnPrevious.Location = new System.Drawing.Point(20, 17);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(79, 31);
-            this.btnPrevious.TabIndex = 0;
-            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPause.BackgroundImage = global::listnhac.Properties.Resources.pause__1____Copy;
+            this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPause.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnPause.FlatAppearance.BorderSize = 0;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.ForeColor = System.Drawing.Color.Lime;
+            this.btnPause.Location = new System.Drawing.Point(186, 17);
+            this.btnPause.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(79, 31);
+            this.btnPause.TabIndex = 2;
+            this.btnPause.UseVisualStyleBackColor = true;
             // 
-            // player
+            // btnPlay
             // 
-            this.player.Enabled = true;
-            this.player.Location = new System.Drawing.Point(2, -2);
-            this.player.Margin = new System.Windows.Forms.Padding(2);
-            this.player.Name = "player";
-            this.player.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("player.OcxState")));
-            this.player.Size = new System.Drawing.Size(835, 295);
-            this.player.TabIndex = 14;
+            this.btnPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.BackgroundImage")));
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnPlay.FlatAppearance.BorderSize = 0;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.ForeColor = System.Drawing.Color.Lime;
+            this.btnPlay.Location = new System.Drawing.Point(103, 17);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(79, 31);
+            this.btnPlay.TabIndex = 3;
+            this.btnPlay.UseVisualStyleBackColor = true;
+            // 
+            // btnStop
+            // 
+            this.btnStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStop.BackgroundImage")));
+            this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStop.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStop.FlatAppearance.BorderSize = 0;
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStop.ForeColor = System.Drawing.Color.Lime;
+            this.btnStop.Location = new System.Drawing.Point(269, 17);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(79, 31);
+            this.btnStop.TabIndex = 4;
+            this.btnStop.UseVisualStyleBackColor = true;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(588, 17);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBar1.Size = new System.Drawing.Size(45, 128);
+            this.trackBar1.TabIndex = 5;
+            // 
+            // track_list
+            // 
+            this.track_list.BackColor = System.Drawing.Color.LightGray;
+            this.track_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.track_list.FormattingEnabled = true;
+            this.track_list.Location = new System.Drawing.Point(20, 61);
+            this.track_list.Margin = new System.Windows.Forms.Padding(2);
+            this.track_list.Name = "track_list";
+            this.track_list.Size = new System.Drawing.Size(554, 95);
+            this.track_list.TabIndex = 6;
+            this.track_list.SelectedIndexChanged += new System.EventHandler(this.track_list_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lime;
+            this.label1.Location = new System.Drawing.Point(619, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "0%";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.ForeColor = System.Drawing.Color.Lime;
+            this.btnNext.Location = new System.Drawing.Point(364, 17);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(79, 31);
+            this.btnNext.TabIndex = 8;
+            this.btnNext.UseVisualStyleBackColor = true;
             // 
             // frmVideo
             // 
@@ -269,10 +269,10 @@
             this.Name = "frmVideo";
             this.Text = "Video";
             this.Load += new System.EventHandler(this.frmVideo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +282,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private AxWMPLib.AxWindowsMediaPlayer player;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Label label1;
@@ -293,6 +294,5 @@
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnPrevious;
-        private AxWMPLib.AxWindowsMediaPlayer player;
     }
 }

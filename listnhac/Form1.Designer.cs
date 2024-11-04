@@ -40,14 +40,13 @@
             this.picAvt = new System.Windows.Forms.PictureBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabMusic = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvMusic = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cmbSort = new System.Windows.Forms.ComboBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnShuffle = new System.Windows.Forms.Button();
-            this.dgvMusic = new System.Windows.Forms.DataGridView();
-            this.colMusic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMusic = new System.Windows.Forms.Label();
             this.playMusic = new AxWMPLib.AxWindowsMediaPlayer();
             this.tabVideos = new System.Windows.Forms.TabPage();
@@ -70,6 +69,9 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.lbl_trackend = new System.Windows.Forms.Label();
             this.btnChon = new System.Windows.Forms.Button();
+            this.colLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coltitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMusic = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvt)).BeginInit();
             this.tab.SuspendLayout();
@@ -145,6 +147,7 @@
             this.btnSelectSong.Text = "SelectSong";
             this.btnSelectSong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSelectSong.UseVisualStyleBackColor = false;
+            this.btnSelectSong.Click += new System.EventHandler(this.btnSelectSong_Click);
             // 
             // btnPlaylist
             // 
@@ -181,6 +184,7 @@
             this.btnVideo.Text = "Videos";
             this.btnVideo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVideo.UseVisualStyleBackColor = false;
+            this.btnVideo.Click += new System.EventHandler(this.btnVideo_Click);
             // 
             // lblUser
             // 
@@ -216,7 +220,7 @@
             // 
             // picAvt
             // 
-            this.picAvt.BackgroundImage = global::listnhac.Properties.Resources.Screenshot_2024_11_03_221943;
+            this.picAvt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAvt.BackgroundImage")));
             this.picAvt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picAvt.ErrorImage = null;
             this.picAvt.InitialImage = null;
@@ -241,12 +245,13 @@
             // 
             // tabMusic
             // 
+            this.tabMusic.Controls.Add(this.button1);
+            this.tabMusic.Controls.Add(this.dgvMusic);
             this.tabMusic.Controls.Add(this.btnDelete);
             this.tabMusic.Controls.Add(this.cmbSort);
             this.tabMusic.Controls.Add(this.btnExit);
             this.tabMusic.Controls.Add(this.btnAdd);
             this.tabMusic.Controls.Add(this.btnShuffle);
-            this.tabMusic.Controls.Add(this.dgvMusic);
             this.tabMusic.Controls.Add(this.lblMusic);
             this.tabMusic.Controls.Add(this.playMusic);
             this.tabMusic.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -259,6 +264,36 @@
             this.tabMusic.Text = "Playing";
             this.tabMusic.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(255, 71);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(56, 32);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvMusic
+            // 
+            this.dgvMusic.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMusic.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
+            this.dgvMusic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMusic.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMusic,
+            this.coltitle,
+            this.colLink});
+            this.dgvMusic.Location = new System.Drawing.Point(2, 139);
+            this.dgvMusic.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMusic.Name = "dgvMusic";
+            this.dgvMusic.RowHeadersWidth = 51;
+            this.dgvMusic.RowTemplate.Height = 24;
+            this.dgvMusic.Size = new System.Drawing.Size(538, 306);
+            this.dgvMusic.TabIndex = 15;
+            // 
             // btnDelete
             // 
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -270,6 +305,7 @@
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Remove";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cmbSort
             // 
@@ -281,11 +317,12 @@
             this.cmbSort.Name = "cmbSort";
             this.cmbSort.Size = new System.Drawing.Size(78, 21);
             this.cmbSort.TabIndex = 13;
+            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.btnExit.BackgroundImage = global::listnhac.Properties.Resources.reject;
+            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
@@ -299,6 +336,7 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnAdd
             // 
@@ -311,6 +349,7 @@
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Add Music";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnShuffle
             // 
@@ -328,34 +367,7 @@
             this.btnShuffle.TabIndex = 11;
             this.btnShuffle.Text = "Shuffle and play";
             this.btnShuffle.UseVisualStyleBackColor = false;
-            // 
-            // dgvMusic
-            // 
-            this.dgvMusic.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMusic.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.dgvMusic.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMusic.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMusic,
-            this.colLink});
-            this.dgvMusic.Location = new System.Drawing.Point(0, 155);
-            this.dgvMusic.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvMusic.Name = "dgvMusic";
-            this.dgvMusic.RowHeadersWidth = 51;
-            this.dgvMusic.RowTemplate.Height = 24;
-            this.dgvMusic.Size = new System.Drawing.Size(538, 290);
-            this.dgvMusic.TabIndex = 10;
-            // 
-            // colMusic
-            // 
-            this.colMusic.HeaderText = "Music";
-            this.colMusic.MinimumWidth = 6;
-            this.colMusic.Name = "colMusic";
-            // 
-            // colLink
-            // 
-            this.colLink.HeaderText = "Nguồn";
-            this.colLink.MinimumWidth = 6;
-            this.colLink.Name = "colLink";
+            this.btnShuffle.Click += new System.EventHandler(this.btnShuffle_Click);
             // 
             // lblMusic
             // 
@@ -400,7 +412,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.button5.BackgroundImage = global::listnhac.Properties.Resources.reject;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderSize = 0;
@@ -414,6 +426,7 @@
             this.button5.TabIndex = 19;
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dgvVideos
             // 
@@ -424,7 +437,7 @@
             this.dgvVideos.Name = "dgvVideos";
             this.dgvVideos.RowHeadersWidth = 51;
             this.dgvVideos.RowTemplate.Height = 24;
-            this.dgvVideos.Size = new System.Drawing.Size(534, 298);
+            this.dgvVideos.Size = new System.Drawing.Size(538, 299);
             this.dgvVideos.TabIndex = 18;
             // 
             // btnAddVideo
@@ -438,6 +451,7 @@
             this.btnAddVideo.TabIndex = 16;
             this.btnAddVideo.Text = "Add Video";
             this.btnAddVideo.UseVisualStyleBackColor = true;
+            this.btnAddVideo.Click += new System.EventHandler(this.btnAddVideo_Click);
             // 
             // btnRemoveVideo
             // 
@@ -515,7 +529,7 @@
             // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.Color.Purple;
-            this.btnPlay.BackgroundImage = global::listnhac.Properties.Resources.play1;
+            this.btnPlay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPlay.BackgroundImage")));
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlay.ForeColor = System.Drawing.Color.Purple;
@@ -526,11 +540,12 @@
             this.btnPlay.Size = new System.Drawing.Size(25, 30);
             this.btnPlay.TabIndex = 32;
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // btnStop
             // 
             this.btnStop.BackColor = System.Drawing.Color.Purple;
-            this.btnStop.BackgroundImage = global::listnhac.Properties.Resources.play_pause;
+            this.btnStop.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnStop.BackgroundImage")));
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.ForeColor = System.Drawing.Color.Purple;
@@ -541,11 +556,12 @@
             this.btnStop.Size = new System.Drawing.Size(34, 29);
             this.btnStop.TabIndex = 31;
             this.btnStop.UseVisualStyleBackColor = false;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnPrevious
             // 
             this.btnPrevious.BackColor = System.Drawing.Color.Purple;
-            this.btnPrevious.BackgroundImage = global::listnhac.Properties.Resources.rewind;
+            this.btnPrevious.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPrevious.BackgroundImage")));
             this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrevious.ForeColor = System.Drawing.Color.Purple;
@@ -556,11 +572,12 @@
             this.btnPrevious.Size = new System.Drawing.Size(36, 29);
             this.btnPrevious.TabIndex = 30;
             this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.Purple;
-            this.btnNext.BackgroundImage = global::listnhac.Properties.Resources.forward;
+            this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.ForeColor = System.Drawing.Color.Purple;
@@ -571,11 +588,12 @@
             this.btnNext.Size = new System.Drawing.Size(25, 30);
             this.btnNext.TabIndex = 29;
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPause
             // 
             this.btnPause.BackColor = System.Drawing.Color.Purple;
-            this.btnPause.BackgroundImage = global::listnhac.Properties.Resources.pause__1____Copy1;
+            this.btnPause.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPause.BackgroundImage")));
             this.btnPause.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPause.ForeColor = System.Drawing.Color.Purple;
@@ -586,6 +604,7 @@
             this.btnPause.Size = new System.Drawing.Size(32, 30);
             this.btnPause.TabIndex = 28;
             this.btnPause.UseVisualStyleBackColor = false;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // lblTimeStart
             // 
@@ -651,6 +670,24 @@
             this.btnChon.TabIndex = 20;
             this.btnChon.UseVisualStyleBackColor = true;
             // 
+            // colLink
+            // 
+            this.colLink.HeaderText = "Nguồn";
+            this.colLink.MinimumWidth = 6;
+            this.colLink.Name = "colLink";
+            // 
+            // coltitle
+            // 
+            this.coltitle.HeaderText = "title";
+            this.coltitle.MinimumWidth = 6;
+            this.coltitle.Name = "coltitle";
+            // 
+            // colMusic
+            // 
+            this.colMusic.HeaderText = "Music";
+            this.colMusic.MinimumWidth = 6;
+            this.colMusic.Name = "colMusic";
+            // 
             // frmMedia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -663,6 +700,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMedia";
+            this.Load += new System.EventHandler(this.frmMedia_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvt)).EndInit();
@@ -703,7 +741,6 @@
         private System.Windows.Forms.Label lblTimeStart;
         private System.Windows.Forms.Label lblTimeEnd;
         private System.Windows.Forms.Button btnShuffle;
-        private System.Windows.Forms.DataGridView dgvMusic;
         private System.Windows.Forms.Label lblMusic;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ComboBox cmbSort;
@@ -721,7 +758,10 @@
         private System.Windows.Forms.Button btnAddVideo;
         private System.Windows.Forms.DataGridView dgvVideos;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvMusic;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMusic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coltitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLink;
     }
 }
