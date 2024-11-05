@@ -120,6 +120,7 @@
     <Compile Include="Model\PlaylistSong.cs" />
     <Compile Include="Model\Song.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserSong.cs" />
     <Compile Include="Model\Video.cs" />
     <Compile Include="Videos.cs">
       <SubType>Form</SubType>

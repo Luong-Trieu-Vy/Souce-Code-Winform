@@ -16,7 +16,7 @@ namespace listnhac.Model
 
         public int PlaylistID { get; set; }
 
-        public int? UserID { get; set; }
+        public int? UserId { get; set; }
 
         [Required]
         [StringLength(100)]

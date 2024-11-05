@@ -8,7 +8,7 @@ namespace listnhac.Model
     public partial class ModelMediaApp : DbContext
     {
         public ModelMediaApp()
-            : base("name=ModelMediaApp1")
+            : base("name=ModelMediaApp")
         {
         }
 
@@ -17,6 +17,7 @@ namespace listnhac.Model
         public virtual DbSet<PlaylistSong> PlaylistSongs { get; set; }
         public virtual DbSet<Song> Songs { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<UserSong> UserSongs { get; set; }
         public virtual DbSet<Video> Videos { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -33,8 +34,13 @@ namespace listnhac.Model
 
             modelBuilder.Entity<Song>()
                 .HasMany(e => e.Users)
-                .WithMany(e => e.Songs)
+                .WithMany(e => e.Songs1)
                 .Map(m => m.ToTable("UserFavorites").MapLeftKey("SongID").MapRightKey("UserID"));
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Songs)
+                .WithOptional(e => e.User)
+                .HasForeignKey(e => e.UserId);
         }
     }
 }

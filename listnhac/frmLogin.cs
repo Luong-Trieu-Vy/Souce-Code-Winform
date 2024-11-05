@@ -1,16 +1,15 @@
 ﻿using listnhac.Model;
 using System;
-using System.Data.SqlClient;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-using System.Configuration;
 
 namespace listnhac
 {
     public partial class frmLogin : Form
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["ModelMediaApp"].ConnectionString;
+        private ModelMediaApp context = new ModelMediaApp();
 
         public frmLogin()
         {
@@ -38,7 +37,14 @@ namespace listnhac
             if (ValidateLogin(username, password))
             {
                 int userId = GetUserID(username);
-                OpenMainForm(userId);
+                if (userId != -1)
+                {
+                    OpenMainForm(userId);
+                }
+                else
+                {
+                    MessageBox.Show("Không thể lấy ID người dùng.");
+                }
             }
             else
             {
@@ -65,25 +71,11 @@ namespace listnhac
 
         private bool ValidateLogin(string username, string password)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            var user = context.Users.SingleOrDefault(u => u.Username == username);
+            if (user != null)
             {
-                string query = "SELECT Password FROM Users WHERE Username = @Username";
-
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    conn.Open();
-                    var storedPassword = cmd.ExecuteScalar();
-
-                    if (storedPassword != null)
-                    {
-                        string hashedPassword = HashPassword(password);
-
-                        Console.WriteLine($"Mật khẩu đã mã hóa: {hashedPassword}");
-                        Console.WriteLine($"Mật khẩu trong DB: {storedPassword.ToString()}");
-                        return hashedPassword == storedPassword.ToString();
-                    }
-                }
+                string hashedPassword = HashPassword(password);
+                return hashedPassword == user.Password;
             }
             return false;
         }
@@ -99,26 +91,14 @@ namespace listnhac
 
         private int GetUserID(string username)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                string query = "SELECT UserID FROM Users WHERE Username = @Username";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    conn.Open();
-                    return (int)cmd.ExecuteScalar();
-                }
-            }
+            var user = context.Users.SingleOrDefault(u => u.Username == username);
+            return user != null ? user.UserID : -1;
         }
 
-        private void btnExit_Click_2(object sender, EventArgs e)
+
+        private void btnExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

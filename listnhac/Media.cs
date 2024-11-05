@@ -14,7 +14,7 @@ namespace listnhac
         private ModelMediaApp Context;
         private WMPLib.WindowsMediaPlayer player;
         private System.Windows.Forms.Timer timer;
-        private int userId;
+        private int userId;  // ID của người dùng hiện tại
 
         private bool isShuffle = false;
         private List<Song> songList;
@@ -42,7 +42,6 @@ namespace listnhac
 
             songList = new List<Song>();
             videoList = new List<Video>();
-            player.settings.autoStart = false;
         }
 
         private void frmMedia_Load(object sender, EventArgs e)
@@ -50,11 +49,11 @@ namespace listnhac
             cmbSort.Items.AddRange(new string[] { "Sort by A-Z", "Sort by Z-A" });
             cmbSort.SelectedItem = "Sort by A-Z";
 
-            LoadMusic(); // Load music files into the player
+            LoadMusic(); // Load nhạc theo userId
 
             // Initialize trackbar volume to the current player's volume level
-            trackBar1.Minimum = 0; // Set minimum volume level
-            trackBar1.Maximum = 100; // Set maximum volume level
+            trackBar1.Minimum = 0;
+            trackBar1.Maximum = 100;
             trackBar1.Value = player.settings.volume;
         }
 
@@ -236,7 +235,10 @@ namespace listnhac
         {
             try
             {
-                songList = Context.Songs.ToList();
+                songList = Context.Songs
+                            .Where(s => s.UserId == userId)
+                            .ToList();
+
                 BindMusicData();
             }
             catch (Exception ex)
@@ -249,12 +251,14 @@ namespace listnhac
         {
             try
             {
-                videoList = Context.Videos.ToList();
+                videoList = Context.Videos
+                            .Where(v => v.UserId == userId)
+                            .ToList();
                 BindVideoData();
             }
             catch (Exception ex)
             {
-                ShowErrorMessage("Lỗi khi tải danh sách video", ex);
+                MessageBox.Show("Lỗi khi tải danh sách video: " + ex.Message);
             }
         }
 
@@ -279,16 +283,15 @@ namespace listnhac
 
             if (isVideo)
             {
-                // Thêm cột cho Video
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "Title",   // Đảm bảo đối tượng dữ liệu có thuộc tính "Title"
+                    DataPropertyName = "Title",
                     HeaderText = "Tên video",
                     Width = 200
                 });
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "FilePath", // Đảm bảo đối tượng dữ liệu có thuộc tính "FilePath"
+                    DataPropertyName = "FilePath",
                     HeaderText = "Đường dẫn",
                     Width = 300
                 });
@@ -297,19 +300,18 @@ namespace listnhac
             {
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "Title",    // Đảm bảo đối tượng dữ liệu có thuộc tính "Title"
+                    DataPropertyName = "Title",
                     HeaderText = "Tên bài hát",
                     Width = 200
                 });
                 dgv.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    DataPropertyName = "FilePath", // Thêm cột đường dẫn cho bài hát nếu cần
+                    DataPropertyName = "FilePath",
                     HeaderText = "Đường dẫn",
                     Width = 300
                 });
             }
 
-            // Gọi phương thức cấu hình style chung cho DataGridView
             ConfigureDataGridViewStyle(dgv);
         }
 
@@ -322,7 +324,6 @@ namespace listnhac
             dgv.AllowUserToDeleteRows = false;
             dgv.RowHeadersVisible = false;
 
-            // Thiết lập style cho DataGridView
             dgv.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.BackgroundColor = Color.White;
@@ -361,12 +362,12 @@ namespace listnhac
 
         private void PlayCurrentSong()
         {
-            if (currentSongIndex >= 0 && currentSongIndex < songList.Count)
-            {
-                player.URL = songList[currentSongIndex].FilePath;
-                player.controls.play();
-                timer.Start();
-            }
+            if (songList == null || songList.Count == 0 || currentSongIndex < 0 || currentSongIndex >= songList.Count)
+                return;
+
+            player.URL = songList[currentSongIndex].FilePath;
+            player.controls.play();
+            timer.Start();
         }
 
 
@@ -382,20 +383,22 @@ namespace listnhac
                 {
                     foreach (string file in ofd.FileNames)
                     {
-                        // Sử dụng TagLib để lấy thông tin ca sĩ
                         var fileTag = TagLib.File.Create(file);
 
                         Song newSong = new Song
                         {
-                            Title = fileTag.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(file), // Lấy tên bài hát từ metadata, nếu không có thì lấy từ tên tệp
-                            FilePath = file
+                            Title = fileTag.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(file),
+                            FilePath = file,
+                            UserId = userId // Đảm bảo rằng bài hát được thêm có đúng UserId
                         };
 
                         songList.Add(newSong);
                         Context.Songs.Add(newSong);
                     }
 
-                    SaveChangesAndReloadMusic();
+                    // Thực hiện lưu thay đổi và tải lại danh sách nhạc
+                    Context.SaveChanges();
+                    LoadMusic(); // Tải lại dữ liệu vào DataGridView
                 }
             }
         }
@@ -429,15 +432,30 @@ namespace listnhac
 
         private void SortMedia(string sortOrder)
         {
-            if (sortOrder == "Sort by A-Z")
+            if (tab.SelectedTab == tabMusic)
             {
-                songList = songList.OrderBy(s => s.Title).ToList();
+                if (sortOrder == "Sort by A-Z")
+                {
+                    songList = songList.OrderBy(s => s.Title).ToList();
+                }
+                else if (sortOrder == "Sort by Z-A")
+                {
+                    songList = songList.OrderByDescending(s => s.Title).ToList();
+                }
+                BindMusicData();
             }
-            else if (sortOrder == "Sort by Z-A")
+            else if (tab.SelectedTab == tabVideos)
             {
-                songList = songList.OrderByDescending(s => s.Title).ToList();
+                if (sortOrder == "Sort by A-Z")
+                {
+                    videoList = videoList.OrderBy(v => v.Title).ToList();
+                }
+                else if (sortOrder == "Sort by Z-A")
+                {
+                    videoList = videoList.OrderByDescending(v => v.Title).ToList();
+                }
+                BindVideoData();
             }
-            BindMusicData();
         }
 
         // =======================
@@ -485,10 +503,9 @@ namespace listnhac
 
         private void btnAddVideo_Click(object sender, EventArgs e)
         {
-            // thêm video vào datagridview
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Video Files|*.mp4;*.avi;*.mov"; // Thay đổi định dạng nếu cần
+                ofd.Filter = "Video Files|*.mp4;*.avi;*.mov";
                 ofd.Multiselect = true;
 
                 if (ofd.ShowDialog() == DialogResult.OK)
@@ -498,31 +515,18 @@ namespace listnhac
                         Video newVideo = new Video
                         {
                             Title = System.IO.Path.GetFileNameWithoutExtension(file),
-                            FilePath = file
+                            FilePath = file,
+                            UserId = userId
                         };
 
-                        // Kiểm tra xem videoList đã được khởi tạo chưa
-                        if (videoList == null)
-                        {
-                            videoList = new List<Video>();
-                        }
-
-                        try
-                        {
-                            // Thêm video vào danh sách và cơ sở dữ liệu
-                            videoList.Add(newVideo);
-                            Context.Videos.Add(newVideo); // Sửa tên biến ở đây
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Lỗi khi thêm video: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        videoList.Add(newVideo);
+                        Context.Videos.Add(newVideo);
                     }
 
                     try
                     {
-                        Context.SaveChanges(); // Lưu thay đổi vào cơ sở dữ liệu
-                        LoadVideos(); // Tải lại danh sách video
+                        Context.SaveChanges();
+                        LoadVideos();
                     }
                     catch (Exception ex)
                     {
@@ -600,14 +604,20 @@ namespace listnhac
 
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
-            DisplayPlaylist playList = new DisplayPlaylist();
+            DisplayPlaylist playList = new DisplayPlaylist(userId);
             playList.Show(this);
         }
-        
 
-        private void p_bar_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (result == DialogResult.Yes)
+            {
+                frmLogin loginForm = new frmLogin();
+                loginForm.Show(); // Mở form đăng nhập
+                this.Hide(); // Ẩn form hiện tại
+            }
         }
     }
 }

@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedia));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.btnSetting = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnSelectSong = new System.Windows.Forms.Button();
             this.btnPlaylist = new System.Windows.Forms.Button();
             this.btnVideo = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnNoPlaying = new System.Windows.Forms.Button();
+            this.picAvt = new System.Windows.Forms.PictureBox();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabMusic = new System.Windows.Forms.TabPage();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -65,8 +66,8 @@
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.picAvt = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).BeginInit();
             this.tab.SuspendLayout();
             this.tabMusic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusic)).BeginInit();
@@ -75,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvVideo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.panelPlay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -83,7 +83,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelMenu.Controls.Add(this.splitter1);
-            this.panelMenu.Controls.Add(this.btnSetting);
+            this.panelMenu.Controls.Add(this.btnLogOut);
             this.panelMenu.Controls.Add(this.btnSelectSong);
             this.panelMenu.Controls.Add(this.btnPlaylist);
             this.panelMenu.Controls.Add(this.btnVideo);
@@ -107,22 +107,23 @@
             this.splitter1.TabIndex = 7;
             this.splitter1.TabStop = false;
             // 
-            // btnSetting
+            // btnLogOut
             // 
-            this.btnSetting.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetting.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.btnSetting.Location = new System.Drawing.Point(0, 508);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(192, 31);
-            this.btnSetting.TabIndex = 6;
-            this.btnSetting.Text = "Settings...";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnLogOut.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 508);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(192, 31);
+            this.btnLogOut.TabIndex = 6;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnSelectSong
             // 
@@ -190,9 +191,9 @@
             this.lblUser.Location = new System.Drawing.Point(46, 89);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(89, 19);
+            this.lblUser.Size = new System.Drawing.Size(77, 19);
             this.lblUser.TabIndex = 2;
-            this.lblUser.Text = " Cong Thanh";
+            this.lblUser.Text = "Media App";
             // 
             // btnNoPlaying
             // 
@@ -212,6 +213,19 @@
             this.btnNoPlaying.Text = "Home...";
             this.btnNoPlaying.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNoPlaying.UseVisualStyleBackColor = false;
+            // 
+            // picAvt
+            // 
+            this.picAvt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAvt.BackgroundImage")));
+            this.picAvt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picAvt.ErrorImage = null;
+            this.picAvt.InitialImage = null;
+            this.picAvt.Location = new System.Drawing.Point(53, 16);
+            this.picAvt.Margin = new System.Windows.Forms.Padding(2);
+            this.picAvt.Name = "picAvt";
+            this.picAvt.Size = new System.Drawing.Size(62, 53);
+            this.picAvt.TabIndex = 0;
+            this.picAvt.TabStop = false;
             // 
             // tab
             // 
@@ -463,7 +477,6 @@
             this.p_bar.Name = "p_bar";
             this.p_bar.Size = new System.Drawing.Size(346, 5);
             this.p_bar.TabIndex = 21;
-            this.p_bar.Click += new System.EventHandler(this.p_bar_Click);
             // 
             // lblTimeEnd
             // 
@@ -607,19 +620,6 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // picAvt
-            // 
-            this.picAvt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picAvt.BackgroundImage")));
-            this.picAvt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picAvt.ErrorImage = null;
-            this.picAvt.InitialImage = null;
-            this.picAvt.Location = new System.Drawing.Point(53, 16);
-            this.picAvt.Margin = new System.Windows.Forms.Padding(2);
-            this.picAvt.Name = "picAvt";
-            this.picAvt.Size = new System.Drawing.Size(62, 53);
-            this.picAvt.TabIndex = 0;
-            this.picAvt.TabStop = false;
-            // 
             // frmMedia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -636,6 +636,7 @@
             this.Load += new System.EventHandler(this.frmMedia_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).EndInit();
             this.tab.ResumeLayout(false);
             this.tabMusic.ResumeLayout(false);
             this.tabMusic.PerformLayout();
@@ -647,7 +648,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panelPlay.ResumeLayout(false);
             this.panelPlay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -659,7 +659,7 @@
         private System.Windows.Forms.Button btnSelectSong;
         private System.Windows.Forms.Button btnPlaylist;
         private System.Windows.Forms.Button btnVideo;
-        private System.Windows.Forms.Button btnSetting;
+        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.TabPage tabMusic;
         private System.Windows.Forms.TabPage tabVideos;

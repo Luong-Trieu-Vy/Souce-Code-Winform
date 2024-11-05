@@ -97,7 +97,6 @@
             this.dgvPlaylist.RowTemplate.Height = 24;
             this.dgvPlaylist.Size = new System.Drawing.Size(503, 473);
             this.dgvPlaylist.TabIndex = 0;
-            this.dgvPlaylist.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlaylist_CellContentClick);
             // 
             // panel2
             // 

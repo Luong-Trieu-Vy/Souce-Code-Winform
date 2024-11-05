@@ -1,58 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\videos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\videos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winfor\\listnhac\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\model\\modelmediaapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\model\\modelmediaapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\display songs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\display songs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winform\\listnhac\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\media.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\addplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\addplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\addplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\addplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\addplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\addplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\displayplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|c:\\users\\asus\\source\\repos\\souce-code-winfor\\listnhac\\displayplaylist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\displayplaylist.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\videos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\videos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\display songs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\display songs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEA3A4C9-EC2C-42B8-932C-E66AA4AF816C}|listnhac\\listnhac.csproj|solutionrelative:listnhac\\display songs.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,16 +74,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "Media.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Media.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Media.cs",
               "RelativeDocumentMoniker": "listnhac\\Media.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Media.cs [Design]",
-              "RelativeToolTip": "listnhac\\Media.cs [Design]",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Media.cs [Design]*",
+              "RelativeToolTip": "listnhac\\Media.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T03:28:25.226Z",
               "IsPinned": true,
@@ -79,13 +91,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Media.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Media.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Media.cs",
               "RelativeDocumentMoniker": "listnhac\\Media.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Media.cs",
-              "RelativeToolTip": "listnhac\\Media.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAqwGQAAAAMAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Media.cs*",
+              "RelativeToolTip": "listnhac\\Media.cs*",
+              "ViewState": "AgIAAFECAAAAAAAAAAAqwGcCAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T17:47:16.252Z",
               "IsPinned": true,
@@ -95,9 +107,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Edit.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Edit.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Edit.cs",
               "RelativeDocumentMoniker": "listnhac\\Edit.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Edit.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Edit.cs",
               "RelativeToolTip": "listnhac\\Edit.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -109,9 +121,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Program.cs",
               "RelativeDocumentMoniker": "listnhac\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Program.cs",
               "RelativeToolTip": "listnhac\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -123,11 +135,11 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "DisplayPlaylist.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\DisplayPlaylist.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\DisplayPlaylist.cs",
               "RelativeDocumentMoniker": "listnhac\\DisplayPlaylist.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\DisplayPlaylist.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\DisplayPlaylist.cs",
               "RelativeToolTip": "listnhac\\DisplayPlaylist.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwCEAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAG8AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T05:32:32.722Z",
               "IsPinned": true,
@@ -135,66 +147,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Videos.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Videos.cs",
-              "RelativeDocumentMoniker": "listnhac\\Videos.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Videos.cs [Design]*",
-              "RelativeToolTip": "listnhac\\Videos.cs [Design]*",
+              "DocumentIndex": 9,
+              "Title": "DisplayPlaylist.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\DisplayPlaylist.Designer.cs",
+              "RelativeDocumentMoniker": "listnhac\\DisplayPlaylist.Designer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\DisplayPlaylist.Designer.cs",
+              "RelativeToolTip": "listnhac\\DisplayPlaylist.Designer.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:45:50.459Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Display Songs.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Display Songs.Designer.cs",
-              "RelativeDocumentMoniker": "listnhac\\Display Songs.Designer.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Source\\Repos\\Souce-Code-Winform\\listnhac\\Display Songs.Designer.cs",
-              "RelativeToolTip": "listnhac\\Display Songs.Designer.cs",
-              "ViewState": "AgIAACoBAAAAAAAAAAAAAEkBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:41:30.327Z",
+              "WhenOpened": "2024-11-05T00:24:26.887Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ModelMediaApp.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Model\\ModelMediaApp.cs",
-              "RelativeDocumentMoniker": "listnhac\\Model\\ModelMediaApp.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Model\\ModelMediaApp.cs",
-              "RelativeToolTip": "listnhac\\Model\\ModelMediaApp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:19:08.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Display Songs.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Display Songs.cs",
-              "RelativeDocumentMoniker": "listnhac\\Display Songs.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Display Songs.cs",
-              "RelativeToolTip": "listnhac\\Display Songs.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAAqwOIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:08:27.475Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Display Songs.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Display Songs.cs",
-              "RelativeDocumentMoniker": "listnhac\\Display Songs.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Display Songs.cs [Design]",
-              "RelativeToolTip": "listnhac\\Display Songs.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T07:07:14.79Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -219,10 +181,97 @@
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\frmLogin.cs",
+              "RelativeDocumentMoniker": "listnhac\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\frmLogin.cs",
+              "RelativeToolTip": "listnhac\\frmLogin.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAAFwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:20:04.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\frmLogin.cs",
+              "RelativeDocumentMoniker": "listnhac\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\frmLogin.cs [Design]",
+              "RelativeToolTip": "listnhac\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T10:19:54.574Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\App.config",
+              "RelativeDocumentMoniker": "listnhac\\App.config",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\App.config",
+              "RelativeToolTip": "listnhac\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-04T09:31:50.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Videos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Videos.cs",
+              "RelativeDocumentMoniker": "listnhac\\Videos.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\Videos.cs [Design]",
+              "RelativeToolTip": "..\\Souce-Code-Winform\\listnhac\\Videos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:45:50.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Display Songs.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Display Songs.Designer.cs",
+              "RelativeDocumentMoniker": "listnhac\\Display Songs.Designer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Display Songs.Designer.cs",
+              "RelativeToolTip": "listnhac\\Display Songs.Designer.cs",
+              "ViewState": "AgIAACoBAAAAAAAAAAAAAEkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:41:30.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Display Songs.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Display Songs.cs",
+              "RelativeDocumentMoniker": "listnhac\\Display Songs.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Display Songs.cs",
+              "RelativeToolTip": "listnhac\\Display Songs.cs",
+              "ViewState": "AgIAAMsAAAAAAAAAAAAqwOIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:08:27.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Display Songs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Display Songs.cs",
+              "RelativeDocumentMoniker": "listnhac\\Display Songs.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\Display Songs.cs [Design]",
+              "RelativeToolTip": "listnhac\\Display Songs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T07:07:14.79Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DisplayPlaylist.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\DisplayPlaylist.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\DisplayPlaylist.cs",
               "RelativeDocumentMoniker": "listnhac\\DisplayPlaylist.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\DisplayPlaylist.cs [Design]",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\DisplayPlaylist.cs [Design]",
               "RelativeToolTip": "listnhac\\DisplayPlaylist.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T05:20:39.531Z",
@@ -230,24 +279,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
               "Title": "AddPlayList.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\AddPlayList.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\AddPlayList.cs",
               "RelativeDocumentMoniker": "listnhac\\AddPlayList.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\AddPlayList.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\AddPlayList.cs",
               "RelativeToolTip": "listnhac\\AddPlayList.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAASwBQAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-04T05:18:58.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 6,
               "Title": "AddPlayList.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\AddPlayList.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\AddPlayList.cs",
               "RelativeDocumentMoniker": "listnhac\\AddPlayList.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winform\\listnhac\\AddPlayList.cs [Design]",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Souce-Code-Winfor\\listnhac\\AddPlayList.cs [Design]",
               "RelativeToolTip": "listnhac\\AddPlayList.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T08:26:27.079Z",

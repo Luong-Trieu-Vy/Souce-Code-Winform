@@ -3,50 +3,56 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using listnhac.Model;
+
 namespace listnhac
 {
     public partial class DisplayPlaylist : Form
     {
-        private ModelMediaApp _context;
+        private ModelMediaApp Context;
+        private int userId;
 
-        public DisplayPlaylist()
+        public DisplayPlaylist(int userId)
         {
             InitializeComponent();
-            _context = new ModelMediaApp();
+            Context = new ModelMediaApp();
+            this.userId = userId;
+
+            // Kiểm tra giá trị userId
+            MessageBox.Show("User ID: " + userId);
+
             LoadPlaylists();
         }
 
         private void LoadPlaylists()
         {
-            var playlists = _context.Playlists.Select(p => new
+            try
             {
-                p.PlaylistID,
-                p.Name,
-                p.Description,
-                p.CreatedDate
-            }).ToList();
+                var playlists = Context.Playlists
+                                       .Where(p => p.UserId == userId)
+                                       .ToList();
 
-            dgvPlaylist.DataSource = playlists;
+                // Kiểm tra xem có playlist nào không
+                if (!playlists.Any())
+                {
+                    MessageBox.Show("Không có playlist nào được tìm thấy cho user này."); // Thông báo nếu không có playlist
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng playlist: " + playlists.Count); // Kiểm tra số lượng playlist
+                }
+
+                dgvPlaylist.DataSource = playlists; // Gán danh sách playlist vào DataGridView
+                dgvPlaylist.AutoGenerateColumns = true; // Tự động tạo cột nếu cần
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải danh sách playlist: " + ex.Message);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEdit_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvPlaylist_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btnDelete_Click_1(object sender, EventArgs e)
@@ -61,14 +67,14 @@ namespace listnhac
                     try
                     {
                         // Xóa mối quan hệ giữa Playlist và Song
-                        var playlistSongs = _context.PlaylistSongs.Where(ps => ps.PlaylistID == playlistId).ToList();
-                        _context.PlaylistSongs.RemoveRange(playlistSongs);
+                        var playlistSongs = Context.PlaylistSongs.Where(ps => ps.PlaylistID == playlistId).ToList();
+                        Context.PlaylistSongs.RemoveRange(playlistSongs);
 
                         // Xóa Playlist
-                        var playlist = _context.Playlists.Find(playlistId);
-                        _context.Playlists.Remove(playlist);
+                        var playlist = Context.Playlists.Find(playlistId);
+                        Context.Playlists.Remove(playlist);
 
-                        _context.SaveChanges();
+                        Context.SaveChanges();
 
                         MessageBox.Show("Xóa playlist thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadPlaylists();
@@ -103,7 +109,7 @@ namespace listnhac
 
         private void btnAddPlayList_Click(object sender, EventArgs e)
         {
-            frmAddPlayList addPlayListForm = new frmAddPlayList();
+            frmAddPlayList addPlayListForm = new frmAddPlayList(userId); 
 
             if (addPlayListForm.ShowDialog() == DialogResult.OK)
             {
